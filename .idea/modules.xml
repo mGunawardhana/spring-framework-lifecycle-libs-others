@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Spring-Framework.iml" filepath="$PROJECT_DIR$/Spring-Framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringFramework/bean_life_cycle/bean_life_cycle.iml" filepath="$PROJECT_DIR$/SpringFramework/bean_life_cycle/bean_life_cycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringFramework/bean_scopes/bean_scopes.iml" filepath="$PROJECT_DIR$/SpringFramework/bean_scopes/bean_scopes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringFramework/hello_spring/hello_spring.iml" filepath="$PROJECT_DIR$/SpringFramework/hello_spring/hello_spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringFramework/spring_di/spring_di.iml" filepath="$PROJECT_DIR$/SpringFramework/spring_di/spring_di.iml" />
+    </modules>
+  </component>
+</project>
