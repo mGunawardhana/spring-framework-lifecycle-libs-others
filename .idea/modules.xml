@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/SpringFramework/bean_scopes/bean_scopes.iml" filepath="$PROJECT_DIR$/SpringFramework/bean_scopes/bean_scopes.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringFramework/fullmode_&amp;_lightmode/fullmode_&amp;_lightmode.iml" filepath="$PROJECT_DIR$/SpringFramework/fullmode_&amp;_lightmode/fullmode_&amp;_lightmode.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringFramework/hello_spring/hello_spring.iml" filepath="$PROJECT_DIR$/SpringFramework/hello_spring/hello_spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringFramework/runtime_value_injection/runtime_value_injection.iml" filepath="$PROJECT_DIR$/SpringFramework/runtime_value_injection/runtime_value_injection.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringFramework/spring_configuration/spring_configuration.iml" filepath="$PROJECT_DIR$/SpringFramework/spring_configuration/spring_configuration.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringFramework/spring_di/spring_di.iml" filepath="$PROJECT_DIR$/SpringFramework/spring_di/spring_di.iml" />
     </modules>
