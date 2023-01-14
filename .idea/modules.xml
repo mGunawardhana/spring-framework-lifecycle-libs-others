@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/SpringFramework/runtime_value_injection/runtime_value_injection.iml" filepath="$PROJECT_DIR$/SpringFramework/runtime_value_injection/runtime_value_injection.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringFramework/spring_configuration/spring_configuration.iml" filepath="$PROJECT_DIR$/SpringFramework/spring_configuration/spring_configuration.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringFramework/spring_di/spring_di.iml" filepath="$PROJECT_DIR$/SpringFramework/spring_di/spring_di.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringFramework/spring_environment/spring_environment.iml" filepath="$PROJECT_DIR$/SpringFramework/spring_environment/spring_environment.iml" />
     </modules>
   </component>
 </project>
