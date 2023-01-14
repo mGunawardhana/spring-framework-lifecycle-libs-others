@@ -8,6 +8,8 @@ public class AppInitializer {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
         ctx.register(AppConfig.class);
 
+        ctx.refresh();
+        ctx.registerShutdownHook();
     }
 
 }
