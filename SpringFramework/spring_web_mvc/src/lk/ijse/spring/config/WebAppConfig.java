@@ -6,6 +6,10 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
 @EnableWebMvc
-/*@ComponentScan*/
+@ComponentScan(basePackages = "lk.ijse.spring.pojo")
 public class WebAppConfig {
+
+    public WebAppConfig() {
+        System.out.println("WebAppConfig Instantiated !");
+    }
 }
