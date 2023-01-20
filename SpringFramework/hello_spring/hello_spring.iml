@@ -7,6 +7,5 @@
     </content>
     <orderEntry type="jdk" jdkName="19" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="spring-aop-5.3.9-javadoc" level="project" />
   </component>
 </module>
