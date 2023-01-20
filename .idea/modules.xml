@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/SpringFramework/spring_configuration/spring_configuration.iml" filepath="$PROJECT_DIR$/SpringFramework/spring_configuration/spring_configuration.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringFramework/spring_di/spring_di.iml" filepath="$PROJECT_DIR$/SpringFramework/spring_di/spring_di.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringFramework/spring_environment/spring_environment.iml" filepath="$PROJECT_DIR$/SpringFramework/spring_environment/spring_environment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringFramework/spring_web_mvc/spring_web_mvc.iml" filepath="$PROJECT_DIR$/SpringFramework/spring_web_mvc/spring_web_mvc.iml" />
     </modules>
   </component>
 </project>
