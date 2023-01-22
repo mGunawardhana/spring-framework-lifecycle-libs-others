@@ -12,7 +12,7 @@ public class CustomerController {
         System.out.println("CustomerController");
     }
 
-    @GetMapping()
+    @GetMapping
     public void callMe(){
         System.out.println("Call me method invoked !");
     }
