@@ -10,7 +10,7 @@ public class ControllerTwo {
         return "get method invoked";
     }
 
-    @GetMapping(path = "/a")
+    @GetMapping(path = "/a/b")
     public String testTwo() {
         return "get method invoked by method two";
     }
