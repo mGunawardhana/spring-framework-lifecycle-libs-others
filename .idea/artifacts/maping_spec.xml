@@ -8,6 +8,8 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="spring-beans-5.3.9-javadoc" />
+          <element id="library" level="project" name="jackson-annotations-2.14.1" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.22/lombok-1.18.22.jar" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="mapping_spec/web/Web" />

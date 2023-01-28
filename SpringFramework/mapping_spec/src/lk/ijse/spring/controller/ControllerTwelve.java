@@ -4,12 +4,13 @@ import lk.ijse.spring.dto.CustomerDTO;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = "/customer")
+@RequestMapping(path = "/customers")
 @CrossOrigin
 public class ControllerTwelve {
 
+
     @PostMapping
-    public void saveCustomer(@ModelAttribute CustomerDTO customerDTO) {
+    public void saveCustomer(@RequestBody CustomerDTO customerDTO) {
         System.out.println(customerDTO.toString());
         System.out.println("Wade Goda");
     }
