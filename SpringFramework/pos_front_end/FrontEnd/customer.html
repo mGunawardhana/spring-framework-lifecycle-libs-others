@@ -1,0 +1,203 @@
+<!--
+  Developed by - mGunawardhana
+  Contact email - mrgunawardhana27368@gmail.com
+  what's app - 071 - 9043372
+  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Form</title>
+    <link href="web/assets/img/favicon.png" rel="icon">
+    <link href="web/bootstraps/css/bootstrap.min.css" rel="stylesheet">
+    <link crossorigin="anonymous" href="web/bootstraps/css/bootstrap.min.css"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" rel="stylesheet">
+    <link href="web/assets/style.css" rel="stylesheet">
+</head>
+<body>
+
+
+        <!-- header section set up -->
+        <header id="header">
+
+            <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+
+                        <img alt="Bootstrap" height="29" src="web/assets/img/Untitled_design__1_-removebg-preview.png"
+                             style="margin-right: 5px"
+                             width="35">mGunawardhana POS</a>
+
+                    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                            class="navbar-toggler"
+                            data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a aria-current="page" class="nav-link btn " href="index.html" id="Home">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-dark btn-dark active" href="customer.html" id="Customer">Customers</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-dark" id="Item" href="item.html">Items</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-dark" href="order.html" id="Order">Orders</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+
+        <!-- introducing customer form -->
+        <section class="container-fluid " id="customerForm">
+
+            <section class="row mt-0  justify-content-around" style="margin-right: 0; margin-left: 0">
+                <div class="col-12 col-md-5 mt-5">
+                    <div class="pt-3 pb-5 px-3 py-3 mt-2 mainLoader">
+
+                        <!-- manage customer label setup -->
+                        <h1 class="h1 mb-3" style="font-family: 'Kanit', sans-serif;color: #2a6407; font-weight: bold ">Manage
+                            Customer</h1>
+                        <div class="mb-3">
+
+                            <!-- search text label -->
+                            <label class="form-label" for="srcCustomerId" style="color: #3fd518; font-weight: bold">Search
+                                Customer</label>
+
+                            <!-- text field set up -->
+                            <input class="searchFld form-control " id="srcCustomerId" placeholder="Customer ID" type="text">
+
+                        </div>
+                        <!-- adding buttons for customer managements -->
+
+                        <!-- add button -->
+                        <button class="btn btnBackGround m-lg-2" id="addCustomerBtn"
+                                style="background-color: #2ed573; color: black;font-weight: bold;"
+                                type="button">Add Customer
+                        </button>
+                        <!-- update button -->
+                        <button class="btn btnBackGround m-lg-2" id="updateCustomerBtn"
+                                style="background-color: #eccc68; color: black;font-weight: bold;"
+                                type="button">Update Customer
+                        </button>
+                        <!-- delete button -->
+                        <button class="btn btnBackGround m-lg-2" id="deleteCustomerBtn"
+                                style="background-color: #ff4757; color: black;font-weight: bold;"
+                                type="button">Delete Customer
+                        </button>
+
+                    </div>
+                </div>
+
+                <!-- customer details form -->
+
+
+                <div class="col-12 col-md-5 mt-3 textFldPanes">
+
+
+                    <form id="customerFormController">
+                        <div class="form-group">
+                            <!-- customer ID set up -->
+                            <div class="mb-3">
+                                <label class="form-label" for="cusIdTxt" style="font-weight: bolder">Customer ID</label>
+                                <input class="searchFld form-control " name="id"
+                                       id="cusIdTxt" placeholder="Customer ID" type="text">
+                                <p><small class="text-danger fw-bold" id="customerIdLbl"></small></p>
+                            </div>
+
+                            <!-- customer Name set up -->
+                            <div class="mb-3">
+                                <label class="form-label" for="cusNameTxt" style="font-weight: bolder">Customer Name</label>
+                                <input class="form-control" id="cusNameTxt" name="name"
+                                       placeholder="Customer Name" type="text">
+                                <p><small class="text-danger fw-bold" id="customerNameLbl"></small></p>
+                            </div>
+
+                            <!-- customer Address set up -->
+                            <div class="mb-3">
+                                <label class="form-label" for="cusAddressTxt" style="font-weight: bolder">Customer
+                                    Address</label>
+                                <input class="form-control" id="cusAddressTxt"
+                                       name="address" placeholder="Customer Address" type="text">
+                                <p><small class="text-danger fw-bold" id="customerAddressLbl"></small></p>
+                            </div>
+
+                            <!-- customer Salary set up -->
+                            <div class="mb-3">
+                                <label class="form-label" for="cusContactTxt" style="font-weight: bolder">Contact</label>
+                                <input class="form-control" id="cusContactTxt" name="contact"
+                                       placeholder="Customer Tp" type="text">
+                                <p><small class="text-danger fw-bold" id="CustomerContactLbl"></small></p>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+
+            </section>
+
+            <!-- table management starts -->
+            <section class="row justify-content-center w-100 mt-3">
+                <div class="col" style="padding-left: 2rem">
+                    <!-- table container set up -->
+                    <table class="table table-hover container-fluid classTbl">
+
+                        <!-- table heading -->
+                        <thead class="bg-dark text-white tableHead">
+
+                        <tr>
+                            <th>Customer ID</th>
+                            <th>Customer Name</th>
+                            <th>Customer Address</th>
+                            <th>Contact</th>
+                        </tr>
+                        </thead>
+
+                        <!-- table body set up -->
+                        <tbody id="customerTableBody">
+
+
+                        </tbody>
+
+
+                    </table>
+
+                </div>
+            </section>
+
+        </section>
+
+
+        <!-- jQuery framework imported -->
+        <script src="web/assets/js/jquery-3.6.1.min.js"></script>
+
+        <!-- sweet alert library imported -->
+        <script src="web/assets/swal-lib/package/dist/sweetalert2.all.min.js"></script>
+        <script src="web/js/sample.js"></script>
+
+        <script src="util/common_methods.js"></script>
+        <script src="controller/CustomerController.js"></script>
+        <script crossorigin="anonymous"
+                integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
+        </script>
+
+
+
+</body>
+</html>

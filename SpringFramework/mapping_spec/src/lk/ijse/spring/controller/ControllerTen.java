@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(path = "/ten")
 public class ControllerTen {
 
-    @GetMapping(headers = {"application/json","text/html"})
+    @GetMapping(headers = {"Content-Type=application/json","Accept=text/html"})
     public String testOne() {
         return "test 1";
     }
