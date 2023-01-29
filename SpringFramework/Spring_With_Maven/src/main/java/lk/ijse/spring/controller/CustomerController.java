@@ -20,5 +20,12 @@ public class CustomerController {
         return new ResponseUtil("OK", "Success fully Deleted ! " + id, null);
     }
 
+    @PutMapping
+    public ResponseUtil updateCustomer(@RequestBody CustomerDTO customerDTO) {
+        return new ResponseUtil("OK", "Success fully updated ! " + customerDTO.getId(), null);
+    }
+
+
+
 
 }
