@@ -15,9 +15,9 @@ public class CustomerController {
         return new ResponseUtil("OK", "Success fully Registered !", null);
     }
 
-    @DeleteMapping
-    public void deleteCustomer(){
-
+    @DeleteMapping(params = "id")
+    public ResponseUtil deleteCustomer(@RequestParam String id) {
+        return new ResponseUtil("OK", "Success fully Deleted ! " + id, null);
     }
 
 
