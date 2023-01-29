@@ -5,7 +5,7 @@
  *  * what's app - 071 - 9043372
  *
  */
-let baseURL = "http://localhost:8080/maping_spec/";
+let baseURL = "http://localhost:8080/app/";
 
 /** array for storing order details */
 let orderDetails = [];
