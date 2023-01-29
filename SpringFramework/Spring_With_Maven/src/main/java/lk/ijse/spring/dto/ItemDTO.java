@@ -1,6 +1,13 @@
 package lk.ijse.spring.dto;
 
+import lombok.*;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
+@ToString
+@EqualsAndHashCode
 public class ItemDTO {
     private String itemId;
     private String itemName;
