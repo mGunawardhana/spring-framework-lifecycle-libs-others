@@ -54,6 +54,7 @@ public class CustomerController {
         list.add(new CustomerDTO("C005", "Stefan", "SL", "071-9045765"));
 
         return new ResponseUtil("OK", "Successfully Loaded ! ", list);
+
     }
 
 }

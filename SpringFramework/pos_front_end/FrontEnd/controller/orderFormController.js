@@ -5,7 +5,7 @@
  *  * what's app - 071 - 9043372
  *
  */
-let baseURL = "http://localhost:8080/app/";
+let baseURL = "http://localhost:8080/Spring_With_Maven_war/";
 
 /** array for storing order details */
 let orderDetails = [];
@@ -249,7 +249,7 @@ $("#btnSubmitOrder").on('click', function () {
     $('#txtBalance').val(s - (oAmount - discountedPrice));
 
     $.ajax({
-        url: baseURL + "purchace",
+        url: baseURL + "place_order",
         method: "post",
         dataType: "json",
         data: JSON.stringify(ob),
@@ -296,7 +296,7 @@ function refresh() {
 function loadAllOrder() {
     $("#tblOrder").empty();
     $.ajax({
-        url: baseURL + "purchace?option=Order",
+        url: baseURL + "place_order?option=Order",
         success: function (res) {
             for (let c of res.data) {
 
@@ -328,7 +328,7 @@ function loadAllOrder() {
 function loadAllOrderDetailsForm() {
     $("#tblOrderDetails").empty();
     $.ajax({
-        url: baseURL + "purchace?option=OrderDetails",
+        url: baseURL + "place_order?option=OrderDetails",
         success: function (res) {
             for (let c of res.data) {
 
