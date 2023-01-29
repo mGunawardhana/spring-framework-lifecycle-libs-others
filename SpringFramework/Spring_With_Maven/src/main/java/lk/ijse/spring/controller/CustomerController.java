@@ -4,6 +4,10 @@ import lk.ijse.spring.dto.CustomerDTO;
 import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.web.bind.annotation.*;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
 @RestController
 @CrossOrigin
 @RequestMapping("/customer")
@@ -25,7 +29,16 @@ public class CustomerController {
         return new ResponseUtil("OK", "Success fully updated ! " + customerDTO.getId(), null);
     }
 
+    @GetMapping
+    public ResponseUtil getAllCustomers() {
+        List<CustomerDTO> list = new ArrayList<>();
+        list.add(new CustomerDTO("C001","Maneesha","US","071-9065678"));
+        list.add(new CustomerDTO("C002","Dinithi","SL","071-9048978"));
+        list.add(new CustomerDTO("C003","Ann","AUS","071-9067578"));
+        list.add(new CustomerDTO("C004","Helena","France","071-9067578"));
+        list.add(new CustomerDTO("C005","Stefan","SL","071-9045765"));
 
-
+        return new ResponseUtil("OK", "Successfully Loaded ! ", null);
+    }
 
 }
