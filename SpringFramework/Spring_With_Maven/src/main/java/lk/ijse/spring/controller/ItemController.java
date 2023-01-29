@@ -18,7 +18,7 @@ public class ItemController {
         return new ResponseUtil("OK", "Successfully Registered !", null);
     }
 
-    @DeleteMapping(params = "itemId")
+    @DeleteMapping(params = {"itemId"})
     public ResponseUtil deleteCustomer(@RequestParam String itemId) {
         return new ResponseUtil("OK", "Successfully Deleted ! " + itemId, null);
     }

@@ -2,6 +2,7 @@ package lk.ijse.spring.controller;
 
 import lk.ijse.spring.dto.CustomerDTO;
 import lk.ijse.spring.util.ResponseUtil;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -12,20 +13,35 @@ import java.util.List;
 @RequestMapping("/customer")
 public class CustomerController {
 
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public ResponseUtil saveCustomer(@ModelAttribute CustomerDTO customerDTO) {
         System.out.println(customerDTO.toString());
-        return new ResponseUtil("OK", "Success fully Registered !", null);
+        if (customerDTO.getId().equals("C001")) {
+            throw new RuntimeException("All ready have this id");
+        }
+
+        return new ResponseUtil("OK", "Successfully Registered !", null);
     }
 
-    @DeleteMapping(params = "id")
-    public ResponseUtil deleteCustomer(@RequestParam String id) {
-        return new ResponseUtil("OK", "Success fully Deleted ! " + id, null);
+
+    //TODO delete customer method error message problem detected correct these cases...
+    @DeleteMapping(params = {"search_by_id"})
+    public ResponseUtil deleteCustomer(@RequestParam String search_by_id) {
+        if (search_by_id.equals("C001")) {
+            throw new RuntimeException("Wrong id");
+        }
+        return new ResponseUtil("OK", "Successfully Deleted ! " + search_by_id, null);
     }
 
     @PutMapping
     public ResponseUtil updateCustomer(@RequestBody CustomerDTO customerDTO) {
-        return new ResponseUtil("OK", "Success fully updated ! " + customerDTO.getId(), null);
+
+        if (customerDTO.getId().equals("C001")) {
+            throw new RuntimeException("this id haven't in database");
+        }
+
+        return new ResponseUtil("OK", "Successfully updated ! " + customerDTO.getId(), null);
     }
 
     @GetMapping

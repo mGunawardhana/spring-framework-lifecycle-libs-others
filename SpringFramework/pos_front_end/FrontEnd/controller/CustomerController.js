@@ -26,7 +26,9 @@ function saveCustomer() {
             getAllCustomers();
             alert(res.message);
         }, error: function (error) {
-            alert(JSON.parse(error.responseText).message);
+            var errorMessage = JSON.parse(error.responseText);
+            alert(errorMessage.message);
+            /*alert(JSON.parse(error.responseText).message);*/
         }
     });
 }
