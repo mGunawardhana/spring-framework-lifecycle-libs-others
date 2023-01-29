@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/item")
+@RequestMapping("item")
 public class ItemController {
 
     @PostMapping
@@ -28,7 +28,7 @@ public class ItemController {
         return new ResponseUtil("OK", "Successfully updated ! " + itemDTO.getItemId(), null);
     }
 
-    @GetMapping
+/*    @GetMapping
     public ResponseUtil getAllCustomers() {
         List<ItemDTO> list = new ArrayList<>();
         list.add(new ItemDTO("I00-001","Choco",1000,1250.00));
@@ -36,8 +36,7 @@ public class ItemController {
         list.add(new ItemDTO("I00-003","Vanilla",1000,1200.00));
         list.add(new ItemDTO("I00-004","Strawberry",1000,1500.00));
         list.add(new ItemDTO("I00-005","MixFruit",1000,1750.00));
-
         return new ResponseUtil("OK", "Successfully Loaded ! ", list);
-    }
+    }*/
 
 }

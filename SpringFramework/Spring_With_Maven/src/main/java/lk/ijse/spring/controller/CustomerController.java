@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/customer")
+@RequestMapping("customer")
 public class CustomerController {
 
     @ResponseStatus(HttpStatus.CREATED)
@@ -44,7 +44,7 @@ public class CustomerController {
         return new ResponseUtil("OK", "Successfully updated ! " + customerDTO.getId(), null);
     }
 
-    @GetMapping
+/*    @GetMapping
     public ResponseUtil getAllCustomers() {
         List<CustomerDTO> list = new ArrayList<>();
         list.add(new CustomerDTO("C001", "Maneesha", "US", "071-9065678"));
@@ -52,9 +52,7 @@ public class CustomerController {
         list.add(new CustomerDTO("C003", "Ann", "AUS", "071-9067578"));
         list.add(new CustomerDTO("C004", "Helena", "France", "071-9067578"));
         list.add(new CustomerDTO("C005", "Stefan", "SL", "071-9045765"));
-
         return new ResponseUtil("OK", "Successfully Loaded ! ", list);
-
-    }
+    }*/
 
 }
