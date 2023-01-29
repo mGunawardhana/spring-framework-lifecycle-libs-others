@@ -1,6 +1,7 @@
 package lk.ijse.spring.advisor;
 
 
+import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -10,8 +11,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class AppWideExceptionHandler {
 
     @ExceptionHandler({RuntimeException.class})
-    public void handleExceptions(RuntimeException exception) {
-        System.out.println(exception.getMessage());
+    public ResponseUtil handleExceptions(RuntimeException exception) {
+        return new ResponseUtil("Error", exception.getMessage(), null);
     }
 
 }
