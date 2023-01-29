@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/customer")
 public class CustomerController {
 
-/*    @PostMapping
-    public ResponseUtil saveCustomer(@ModelAttribute CustomerDTO customerDTO){
-        System.out.println(customerDTO.toString());
-        return new ResponseUtil("OK","Success fully Registered !",null);
-    }*/
-
     @PostMapping
-    public void saveCustomer(CustomerDTO customerDTO){
+    public ResponseUtil saveCustomer(@ModelAttribute CustomerDTO customerDTO) {
         System.out.println(customerDTO.toString());
+        return new ResponseUtil("OK", "Success fully Registered !", null);
+    }
+
+    @DeleteMapping
+    public void deleteCustomer(){
+
     }
 
 
