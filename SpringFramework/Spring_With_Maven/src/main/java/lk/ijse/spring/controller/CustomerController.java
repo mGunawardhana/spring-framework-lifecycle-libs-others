@@ -17,9 +17,9 @@ public class CustomerController {
     @PostMapping
     public ResponseUtil saveCustomer(@ModelAttribute CustomerDTO customerDTO) {
         System.out.println(customerDTO.toString());
-        if (customerDTO.getId().equals("C001")) {
+/*        if (customerDTO.getId().equals("C001")) {
             throw new RuntimeException("All ready have this id");
-        }
+        }*/
 
         return new ResponseUtil("OK", "Successfully Registered !", null);
     }
@@ -44,15 +44,12 @@ public class CustomerController {
         return new ResponseUtil("OK", "Successfully updated ! " + customerDTO.getId(), null);
     }
 
-/*    @GetMapping
+    @GetMapping("customer")
     public ResponseUtil getAllCustomers() {
         List<CustomerDTO> list = new ArrayList<>();
         list.add(new CustomerDTO("C001", "Maneesha", "US", "071-9065678"));
         list.add(new CustomerDTO("C002", "Dinithi", "SL", "071-9048978"));
-        list.add(new CustomerDTO("C003", "Ann", "AUS", "071-9067578"));
-        list.add(new CustomerDTO("C004", "Helena", "France", "071-9067578"));
-        list.add(new CustomerDTO("C005", "Stefan", "SL", "071-9045765"));
         return new ResponseUtil("OK", "Successfully Loaded ! ", list);
-    }*/
+    }
 
 }

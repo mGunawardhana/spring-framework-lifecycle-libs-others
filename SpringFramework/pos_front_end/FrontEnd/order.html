@@ -83,8 +83,8 @@
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <label>Order ID :</label>
-                                                <label for="txtOrderID"></label><input class=" form-control"
-                                                                                       id="txtOrderID" type="text">
+                                                <label for="txtOrderID"></label>
+                                                <input class=" form-control" name="order_id" id="txtOrderID" type="text">
                                                 <span class="control-error" id="orderId-invalid-error"></span>
                                             </div>
                                         </div>
@@ -93,8 +93,8 @@
                                         <div class="col-6">
                                             <div class="form-group">
                                                 <label>Date :</label>
-                                                <label for="txtDate"></label><input class="form-control" id="txtDate"
-                                                                                    type="date">
+                                                <label for="txtDate"></label>
+                                                <input class="form-control" name="order_date" id="txtDate" type="date">
                                             </div>
                                         </div>
                                     </div>
@@ -105,8 +105,7 @@
                                             <div class="form-group">
                                                 <label>Customer ID</label>
                                                 <label for="orderCustomerID"></label>
-                                                <!--                                                <input class="form-control" id="orderCustomerID">-->
-                                                <select class="form-control" id="orderCustomerID"></select>
+                                                <select class="form-control" name="customer_id" id="orderCustomerID"></select>
                                             </div>
                                         </div>
 
@@ -115,8 +114,7 @@
                                             <div class="form-group">
                                                 <label>Customer Name:</label>
                                                 <label for="selectCusName"></label>
-                                                <!--                                                <select class="form-control" id="selectCusID"></select>-->
-                                                <input class="form-control " disabled id="selectCusName">
+                                                <input class="form-control " name="customer_name" disabled id="selectCusName">
                                                 <span class="control-error" id="cus-empty-error"></span>
                                             </div>
                                         </div>
@@ -127,20 +125,18 @@
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label>Contact :</label>
-                                                <label for="orderCustomerContact"></label><input class="form-control"
-                                                                                                 disabled
-                                                                                                 id="orderCustomerContact"
-                                                                                                 type="text">
+                                                <label for="orderCustomerContact"></label>
+                                                <input class="form-control" name="customer_contact" disabled id="orderCustomerContact"
+                                                       type="text">
                                             </div>
                                         </div>
                                         <!-- customer address text field -->
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label>Address :</label>
-                                                <label for="orderCustomerAddress"></label><input class="form-control"
-                                                                                                 disabled
-                                                                                                 id="orderCustomerAddress"
-                                                                                                 type="text">
+                                                <label for="orderCustomerAddress"></label>
+                                                <input class="form-control" name="customer_address" disabled id="orderCustomerAddress"
+                                                       type="text">
                                             </div>
                                         </div>
                                     </div>
@@ -165,8 +161,7 @@
                                             <div class="form-group">
                                                 <label>Item Code :</label>
                                                 <label for="itemCodeCombo"></label>
-                                                <!--                                                <input class="form-control" id="txtItemCode" type="text">-->
-                                                <select class="form-control" id="itemCodeCombo"></select>
+                                                <select class="form-control" name="item_code_cmb" id="itemCodeCombo"></select>
                                             </div>
                                         </div>
 
@@ -174,37 +169,33 @@
                                             <div class="form-group">
                                                 <label>Item :</label>
                                                 <label for="selectItemCode"></label>
-
-                                                <input class="form-control" disabled id="selectItemCode" type="text">
-                                                <!--                                                <select class="form-control" disabled id="selectItemCode"></select>-->
-                                                <span class="control-error"
-                                                      id="item-empty-error"></span>
+                                                <input class="form-control" name="item_code" disabled id="selectItemCode" type="text">
+                                                <span class="control-error" id="item-empty-error"></span>
                                             </div>
                                         </div>
 
                                         <div class="col-5">
                                             <div class="form-group">
                                                 <label>Item Name :</label>
-                                                <label for="txtItemDescription"></label><input class="form-control"
-                                                                                               disabled
-                                                                                               id="txtItemDescription"
-                                                                                               type="text">
+                                                <label for="txtItemDescription"></label>
+                                                <input class="form-control" name="item_name" disabled id="txtItemDescription"
+                                                       type="text">
                                             </div>
                                         </div>
 
                                         <div class="col-4">
                                             <div class="form-group">
                                                 <label class="">Price :</label>
-                                                <label for="txtItemPrice"></label><input class="form-control" disabled
-                                                                                         id="txtItemPrice" type="text">
+                                                <label for="txtItemPrice"></label>
+                                                <input class="form-control" name="item_price" disabled id="txtItemPrice" type="text">
                                             </div>
                                         </div>
 
                                         <div class="col-3">
                                             <div class="form-group">
                                                 <label class="">QtyOnH :</label>
-                                                <label for="txtQTYOnHand"></label><input class=" form-control" disabled
-                                                                                         id="txtQTYOnHand" type="text">
+                                                <label for="txtQTYOnHand"></label>
+                                                <input class=" form-control" name="item_qty_on_hand" disabled id="txtQTYOnHand" type="text">
                                             </div>
                                         </div>
 
@@ -214,15 +205,14 @@
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label>Order Quantity :</label>
-                                                <label for="txtQty"></label><input class="searchFld form-control"
-                                                                                   id="txtQty"
-                                                                                   min="1" type="number">
+                                                <label for="txtQty"></label>
+                                                <input class="searchFld form-control" name="item_qty" id="txtQty" min="1" type="number">
                                                 <span class="control-error" id="order-qty-empty-error"></span>
 
                                                 <div class="form-group">
                                                     <label>Search to Remove From Cart :</label>
                                                     <label for="searchToRemoveFromCart"></label>
-                                                    <input class="form-control" id="searchToRemoveFromCart">
+                                                    <input class="form-control" name="search_to_remove" id="searchToRemoveFromCart">
                                                 </div>
                                             </div>
                                         </div>
@@ -266,8 +256,7 @@
                                         </div>
 
                                         <div class="col-12">
-                                            <input class="searchFld form-control" disabled id="total"
-                                                   type="text">
+                                            <input class="searchFld form-control" name="tot" disabled id="total" type="text">
                                         </div>
 
                                     </div>
@@ -279,10 +268,7 @@
                                             <span id="total-text1">Discounted Price : </span>
                                         </div>
                                         <div class="col-12">
-                                            <input class="searchFld form-control" disabled id="subtotal"
-                                                   type="text">
-                                            <!--                                            Rs/= <span id="subtotal">00.0</span>-->
-                                            <!--                                            <span id="subtotal">00.0</span> Rs/=-->
+                                            <input class="searchFld form-control" disabled id="subtotal" type="text">
                                         </div>
                                     </div>
                                 </div>
@@ -290,9 +276,8 @@
                                 <div class="col-6 mt-2">
                                     <div class="form-group">
                                         <label>Cash</label>
-                                        <label for="txtCash"></label><input class="searchFld form-control" id="txtCash"
-                                                                            min="0"
-                                                                            type="number">
+                                        <label for="txtCash"></label>
+                                        <input class="searchFld form-control" id="txtCash" min="0" type="number">
                                         <span class="control-error" id="cash-empty-error"></span>
                                     </div>
                                 </div>
@@ -300,18 +285,16 @@
                                 <div class="col-6 mt-2">
                                     <div class="form-group">
                                         <label>Discount</label>
-                                        <label for="txtDiscount"></label><input class="searchFld form-control"
-                                                                                id="txtDiscount"
-                                                                                min="0" type="number">
+                                        <label for="txtDiscount"></label>
+                                        <input class="searchFld form-control" id="txtDiscount" min="0" type="number">
                                     </div>
                                 </div>
 
                                 <div class="col-12">
                                     <div class="form-group">
                                         <label>Balance</label>
-                                        <label for="txtBalance"></label><input class="searchFld form-control" disabled
-                                                                               id="txtBalance"
-                                                                               type="text">
+                                        <label for="txtBalance"></label>
+                                        <input class="searchFld form-control" disabled id="txtBalance" type="text">
                                     </div>
                                 </div>
                                 <div class="col-8 ">
@@ -375,7 +358,9 @@
                                 <!-- View Orders Table Start -->
                                 <div class="col-11 justify-content-around ">
                                     <div class="PlaceOrderTableDiv overflow-auto">
-                                        <h3><center>Order Table</center></h3>
+                                        <h3>
+                                            <center>Order Table</center>
+                                        </h3>
                                         <table class="table table-dark table-striped table-bordered table-hover">
                                             <thead class="text-light table-dark text-center  table-bordered sticky-top">
                                             <tr>
@@ -402,7 +387,9 @@
                                 <div class="col-11 justify-content-around ">
                                     <div class="PlaceOrderTableDiv overflow-auto">
                                         <table class="table table-dark table-striped table-bordered table-hover">
-                                            <h3><center>OrderDetails Table</center></h3>
+                                            <h3>
+                                                <center>OrderDetails Table</center>
+                                            </h3>
                                             <thead class="text-light table-dark text-center  table-bordered sticky-top">
                                             <tr>
                                                 <th>Order Id</th>
