@@ -267,7 +267,9 @@ function refresh() {
 function loadAllOrder() {
     $("#tblOrder").empty();
     $.ajax({
-        url: baseURL + "/load_all_orders_table", success: function (res) {
+        url: baseURL + "/load_all_orders_table",
+
+        success: function (res) {
             for (let c of res.data) {
 
                 let orderID = c.order_id;//TODO working ....
@@ -291,7 +293,9 @@ function loadAllOrder() {
 function loadAllOrderDetailsForm() {
     $("#tblOrderDetails").empty();
     $.ajax({
-        url: baseURL + "/load_all_order_details_table", success: function (res) {
+        url: baseURL + "/load_all_order_details_table",
+        success: function (res) {
+
             for (let c of res.data) {
                 //TODO discounted values missed .............
                 let order_id = c.order_id;//TODO working ....
@@ -300,6 +304,7 @@ function loadAllOrderDetailsForm() {
                 let price = c.item_price;//TODO working ....
                 let quantity = c.item_qty;//TODO working ....
                 let total = c.tot;//TODO working ....
+
 
                 console.log(order_id, code, name, price, quantity, total);
 

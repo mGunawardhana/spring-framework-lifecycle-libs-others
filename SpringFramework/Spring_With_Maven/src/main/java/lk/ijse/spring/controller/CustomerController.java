@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static lk.ijse.spring.db.DB.customerDTO;
+
 @RestController
 @CrossOrigin
 @RequestMapping("customer")
@@ -17,13 +19,11 @@ public class CustomerController {
     @PostMapping
     public ResponseUtil saveCustomer(@ModelAttribute CustomerDTO customerDTO) {
         System.out.println(customerDTO.toString());
-/*        if (customerDTO.getId().equals("C001")) {
+        if (customerDTO.getId().equals("C001")) {
             throw new RuntimeException("All ready have this id");
-        }*/
-
+        }
         return new ResponseUtil("OK", "Successfully Registered !", null);
     }
-
 
     //TODO delete customer method error message problem detected correct these cases...
     @DeleteMapping(params = {"search_by_id"})
@@ -34,22 +34,19 @@ public class CustomerController {
         return new ResponseUtil("OK", "Successfully Deleted ! " + search_by_id, null);
     }
 
-    @PutMapping
+    @PutMapping()
     public ResponseUtil updateCustomer(@RequestBody CustomerDTO customerDTO) {
-
         if (customerDTO.getId().equals("C001")) {
             throw new RuntimeException("this id haven't in database");
         }
-
         return new ResponseUtil("OK", "Successfully updated ! " + customerDTO.getId(), null);
     }
 
     @GetMapping("customer")
     public ResponseUtil getAllCustomers() {
-        List<CustomerDTO> list = new ArrayList<>();
-        list.add(new CustomerDTO("C001", "Maneesha", "US", "071-9065678"));
-        list.add(new CustomerDTO("C002", "Dinithi", "SL", "071-9048978"));
-        return new ResponseUtil("OK", "Successfully Loaded ! ", list);
+        customerDTO.add(new CustomerDTO("C001", "Maneesha", "US", "071-9065678"));
+        customerDTO.add(new CustomerDTO("C002", "Dinithi", "SL", "071-9048978"));
+        return new ResponseUtil("OK", "Successfully Loaded ! ", customerDTO);
     }
 
 }
