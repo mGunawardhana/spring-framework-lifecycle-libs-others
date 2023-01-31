@@ -6,6 +6,7 @@ import lk.ijse.spring.util.ResponseUtil;
 import lombok.SneakyThrows;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static lk.ijse.spring.db.DB.*;
@@ -31,13 +32,16 @@ public class PlaceOrderFormController {
         return new ResponseUtil("OK", "Successfully Loaded ! ", order_details_list);
     }
 
-    @GetMapping("/load_all_orders_table")
+/*    @GetMapping("/load_all_orders_table")
     public ResponseUtil getOrder(@RequestBody OrderDTO orderDTO) {
-        System.out.println(orderDTO.toString());
+
+        ArrayList<OrderDTO> order = new ArrayList<OrderDTO>();
+
+
         orderList.add(orderDTO);
-        System.out.println(orderList);
+
         return new ResponseUtil("OK", "Successfully Loaded ! ", orderList);
-    }
+    }*/
 
     @SneakyThrows
     @PostMapping("/get_transaction_details")
