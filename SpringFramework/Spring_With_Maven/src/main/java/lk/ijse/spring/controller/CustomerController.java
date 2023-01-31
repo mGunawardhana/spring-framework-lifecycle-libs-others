@@ -5,10 +5,7 @@ import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static lk.ijse.spring.db.DB.customerDTO;
+import static lk.ijse.spring.db.DB.customerList;
 
 @RestController
 @CrossOrigin
@@ -26,12 +23,12 @@ public class CustomerController {
     }
 
     //TODO delete customer method error message problem detected correct these cases...
-    @DeleteMapping(params = {"search_by_id"})
-    public ResponseUtil deleteCustomer(@RequestParam String search_by_id) {
-        if (search_by_id.equals("C001")) {
+    @DeleteMapping(params = {"id"})
+    public ResponseUtil deleteCustomer(@RequestParam String id) {
+      /*  if (id.equals("C001")) {
             throw new RuntimeException("Wrong id");
-        }
-        return new ResponseUtil("OK", "Successfully Deleted ! " + search_by_id, null);
+        }*/
+        return new ResponseUtil("OK", "Successfully Deleted ! " + id, null);
     }
 
     @PutMapping()
@@ -44,9 +41,13 @@ public class CustomerController {
 
     @GetMapping("customer")
     public ResponseUtil getAllCustomers() {
-        customerDTO.add(new CustomerDTO("C001", "Maneesha", "US", "071-9065678"));
-        customerDTO.add(new CustomerDTO("C002", "Dinithi", "SL", "071-9048978"));
-        return new ResponseUtil("OK", "Successfully Loaded ! ", customerDTO);
+        if (customerList.isEmpty()) {
+            customerList.add(new CustomerDTO("C001", "Maneesha", "US", "071-9065678"));
+            customerList.add(new CustomerDTO("C002", "Dinithi", "SL", "071-9048978"));
+            customerList.add(new CustomerDTO("C003", "Ann", "US", "071-9043278"));
+            customerList.add(new CustomerDTO("C004", "Stefan", "SL", "071-9041238"));
+        }
+        return new ResponseUtil("OK", "Successfully Loaded ! ", customerList);
     }
 
 }

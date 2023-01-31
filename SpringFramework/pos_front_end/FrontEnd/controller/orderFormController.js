@@ -251,7 +251,11 @@ function getItemDetails() {
         let quantity = $("#orderTblBody").children().eq(i).children(":eq(3)").text();
         let total = $("#orderTblBody").children().eq(i).children(":eq(4)").text();
         array.push({
-            item_code: code, item_name: name, item_price: price, item_quantity: quantity, item_total: total
+            item_code: code,
+            item_name: name,
+            item_price: price,
+            item_quantity: quantity,
+            item_total: total
         });
     }
     return array;
@@ -303,7 +307,7 @@ function loadAllOrderDetailsForm() {
                 let name = c.item_name;//TODO working ....
                 let price = c.item_price;//TODO working ....
                 let quantity = c.item_qty;//TODO working ....
-                let total = c.tot;//TODO working ....
+                let total = c.item_total;//TODO working ....
 
 
                 console.log(order_id, code, name, price, quantity, total);

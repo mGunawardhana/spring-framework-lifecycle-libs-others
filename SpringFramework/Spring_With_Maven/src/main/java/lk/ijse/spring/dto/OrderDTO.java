@@ -2,6 +2,8 @@ package lk.ijse.spring.dto;
 
 import lombok.*;
 
+import java.util.List;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Setter
@@ -14,7 +16,8 @@ public class OrderDTO {
     private String customer_id;//TODO working .... sending
     private String customer_name;//TODO working .... sending
     private String customer_contact;//TODO working .... sending
-    private Object fullObj;
+    private List<OrderDetailsDTO> fullObj;
+
 
 
     public OrderDTO(String order_id, String order_date, String customer_id, String customer_name, String customer_contact) {
