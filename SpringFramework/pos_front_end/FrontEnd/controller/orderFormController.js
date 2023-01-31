@@ -254,7 +254,7 @@ function getItemDetails() {
             item_code: code,
             item_name: name,
             unit_price: price,
-            item_quantity: quantity,
+            item_qty: quantity,
             item_total: total
         });
     }
