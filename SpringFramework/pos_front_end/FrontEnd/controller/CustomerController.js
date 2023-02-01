@@ -35,9 +35,9 @@ function saveCustomer() {
 
 /** delete customer option */
 $("#deleteCustomerBtn").on('click', function () {
-    let id = $("#srcCustomerId").val();
+
     $.ajax({
-        url: baseURL + "customer",
+        url: baseURL + "?code="+ $("#srcCustomerId").val(),
         method: "delete",
         dataType: "json",
         success: function (resp) {
@@ -121,6 +121,7 @@ function bindRowClickEvents() {
         let contact = $(this).children(":eq(3)").text();
 
 
+        $("#srcCustomerId").val($(this).children(":eq(0)").text());
         $('#cusIdTxt,#srcItemID').val(id);
         $('#cusNameTxt').val(name);
         $('#cusAddressTxt').val(address);

@@ -14,11 +14,7 @@ $("#addItemBtn").on('click', function () {
 function saveItem() {
     let formData = $("#itemFormController").serialize();
     $.ajax({
-        url: baseURL ,
-        method: "post",
-        data: formData,
-        dataType: "json",
-        success: function (res) {
+        url: baseURL, method: "post", data: formData, dataType: "json", success: function (res) {
             getAllItems();
             alert(res.message);
         }, error: function (error) {
@@ -30,10 +26,8 @@ function saveItem() {
 /** delete item option */
 $("#deleteItemBtn").on('click', function () {
     $.ajax({
-        url: baseURL+"?id=itemId",
-        method: "delete",
-        dataType: "json",
-        success: function (resp) {
+        url: baseURL + "?itemId=" + $("#cusIdTxt").val(),
+        method: "delete", dataType: "json", success: function (resp) {
             getAllItems();
             alert(resp.message);
         }, error: function (error) {
@@ -53,10 +47,7 @@ $("#updateItemBtn").on('click', function () {
     let unitPrice = $('#unitPriceTxt').val();
 
     var itemObject = {
-        itemId: itemId,
-        itemName: itemName,
-        qty: itemQty,
-        unitPrice: unitPrice
+        itemId: itemId, itemName: itemName, qty: itemQty, unitPrice: unitPrice
     };
 
     $.ajax({
@@ -68,7 +59,8 @@ $("#updateItemBtn").on('click', function () {
             getAllItems();
             alert(res.message);
             clearItemTextFields()
-        }, error: function (error) {
+        },
+        error: function (error) {
             alert(JSON.parse(error.responseText).message);
         }
     });
@@ -78,8 +70,7 @@ $("#updateItemBtn").on('click', function () {
 function getAllItems() {
     $("#itemTblBody").empty();
     $.ajax({
-        url: baseURL + "item",
-        success: function (res) {
+        url: baseURL + "item", success: function (res) {
             for (let i of res.data) {
 
                 let Id = i.itemId;
@@ -88,13 +79,7 @@ function getAllItems() {
                 let unitPrice = i.unitPrice;
 
 
-                let row = "<tr>" +
-                    "<td>" + Id + "</td>" +
-                    "<td>" + itemName + "</td>" +
-                    "<td>" + itemQty + "</td>" +
-                    "<td>" + unitPrice + "</td>" +
-                    "</tr>"
-                ;
+                let row = "<tr>" + "<td>" + Id + "</td>" + "<td>" + itemName + "</td>" + "<td>" + itemQty + "</td>" + "<td>" + unitPrice + "</td>" + "</tr>";
 
                 $("#itemTblBody").append(row);
             }
@@ -115,6 +100,8 @@ function bindRowClickEventsForItems() {
         let itemQty = $(this).children(":eq(2)").text();
         let unitPrice = $(this).children(":eq(3)").text();
 
+
+        $("#srcItemID").val($(this).children(":eq(0)").text())
         $('#itemIdTxt').val(Id);
         $('#ItemNameTxt').val(itemName);
         $('#itemQtyTxt').val(itemQty);
@@ -139,25 +126,13 @@ $('#ItemNameTxt,#itemIdTxt,#itemQtyTxt,#unitPriceTxt').on('keydown', function (e
 })
 
 /** validator for item id txt   */
-validator('#itemIdTxt', /^I00-0[0-9]{1,5}$/,
-    "Your input can't be validated, Ex - I-001",
-    '#itemIdTxtLbl', '#ItemNameTxt'
-);
+validator('#itemIdTxt', /^I00-0[0-9]{1,5}$/, "Your input can't be validated, Ex - I-001", '#itemIdTxtLbl', '#ItemNameTxt');
 
 /** validator for item name txt  */
-validator('#ItemNameTxt', /^[A-z]{2,10}$/,
-    "Your input can't be validated, Ex - Burger",
-    '#itemNameTxtLbl', '#itemQtyTxt'
-);
+validator('#ItemNameTxt', /^[A-z]{2,10}$/, "Your input can't be validated, Ex - Burger", '#itemNameTxtLbl', '#itemQtyTxt');
 
 /** validator for item Qty txt  */
-validator('#itemQtyTxt', /^[0-9]{1,4}$/,
-    "Your input can't be validated, 10 ",
-    '#itemQtyTxtLbl', '#unitPriceTxt'
-);
+validator('#itemQtyTxt', /^[0-9]{1,4}$/, "Your input can't be validated, 10 ", '#itemQtyTxtLbl', '#unitPriceTxt');
 
 /** validator for item unit price txt  */
-validator('#unitPriceTxt', /^([0-9]{2,6}.[0-9]{1,2})$/,
-    "Your input can't be validated, Ex - 120.99",
-    '#itemUnitPriceTxtLbl', '#ItemNameTxt'
-);
+validator('#unitPriceTxt', /^([0-9]{2,6}.[0-9]{1,2})$/, "Your input can't be validated, Ex - 120.99", '#itemUnitPriceTxtLbl', '#ItemNameTxt');

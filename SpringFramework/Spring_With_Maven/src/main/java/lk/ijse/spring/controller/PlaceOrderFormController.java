@@ -19,7 +19,6 @@ public class PlaceOrderFormController {
 
     @GetMapping(path = "/get_all_customers")
     public ResponseUtil getAllCustomersInToTheCombo(@ModelAttribute CustomerDTO customerDTO) {
-        customerList.add(customerDTO);
         return new ResponseUtil("OK", "Successfully Loaded ! ", customerList);
     }
 
