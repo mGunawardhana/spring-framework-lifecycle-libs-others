@@ -25,9 +25,11 @@ function saveItem() {
 
 /** delete item option */
 $("#deleteItemBtn").on('click', function () {
+
     $.ajax({
-        url: baseURL + "?itemId=" + $("#cusIdTxt").val(),
-        method: "delete", dataType: "json", success: function (resp) {
+        url: baseURL + "?itemId=" + $("#srcItemID").val(),
+        method: "delete",
+        dataType: "json", success: function (resp) {
             getAllItems();
             alert(resp.message);
         }, error: function (error) {
@@ -35,6 +37,7 @@ $("#deleteItemBtn").on('click', function () {
 
         }
     });
+    console.log($("#cusIdTxt").val);
 });
 
 
@@ -51,7 +54,7 @@ $("#updateItemBtn").on('click', function () {
     };
 
     $.ajax({
-        url: baseURL + "item",
+        url: baseURL + "update",
         method: "put",
         contentType: "application/json",
         data: JSON.stringify(itemObject),
@@ -99,9 +102,9 @@ function bindRowClickEventsForItems() {
         let itemName = $(this).children(":eq(1)").text();
         let itemQty = $(this).children(":eq(2)").text();
         let unitPrice = $(this).children(":eq(3)").text();
+        let searchID = $(this).children(":eq(0)").text();
 
-
-        $("#srcItemID").val($(this).children(":eq(0)").text())
+        $("#srcItemID").val(searchID);
         $('#itemIdTxt').val(Id);
         $('#ItemNameTxt').val(itemName);
         $('#itemQtyTxt').val(itemQty);

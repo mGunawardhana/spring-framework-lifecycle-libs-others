@@ -4,7 +4,6 @@ import lk.ijse.spring.dto.ItemDTO;
 import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.web.bind.annotation.*;
 
-import static lk.ijse.spring.db.DB.customerList;
 import static lk.ijse.spring.db.DB.itemList;
 
 @RestController
@@ -20,7 +19,6 @@ public class ItemController {
 
     @DeleteMapping
     public ResponseUtil deleteItem(String itemId) {
-
         System.out.println(itemId);
         ItemDTO ItemDTO = ifExistsItem(itemId);
         if (ItemDTO != null) {
@@ -31,8 +29,18 @@ public class ItemController {
         return new ResponseUtil("OK", "Successfully Deleted ! " + itemId, null);
     }
 
-    @PutMapping
+    @PutMapping("update")
     public ResponseUtil updateItem(@RequestBody ItemDTO itemDTO) {
+        ItemDTO searchItem = ifExistsItem(itemDTO.getItemId());
+        if (searchItem != null) {
+            searchItem.setItemName(itemDTO.getItemName());
+            searchItem.setUnitPrice(itemDTO.getUnitPrice());
+            searchItem.setQty(itemDTO.getQty());
+        } else {
+            throw new RuntimeException("Cannot update item");
+        }
+
+
         return new ResponseUtil("OK", "Successfully updated ! " + itemDTO.getItemId(), "");
     }
 
