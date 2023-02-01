@@ -18,7 +18,7 @@ $("#addCustomerBtn").on('click', function () {
 function saveCustomer() {
     let formData = $("#customerFormController").serialize();
     $.ajax({
-        url: baseURL + "customer",
+        url: baseURL + "save_customer",
         method: "post",
         data: formData,
         dataType: "json",

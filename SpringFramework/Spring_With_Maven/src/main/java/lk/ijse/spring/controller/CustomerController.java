@@ -13,12 +13,12 @@ import static lk.ijse.spring.db.DB.customerList;
 public class CustomerController {
 
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping
+    @PostMapping("save_customer")
     public ResponseUtil saveCustomer(@ModelAttribute CustomerDTO customerDTO) {
-        System.out.println(customerDTO.toString());
-        if (customerDTO.getId().equals("C001")) {
-            throw new RuntimeException("All ready have this id");
-        }
+        customerList.add(customerDTO);
+        /** if (customerDTO.getId().equals("C001")) {
+         throw new RuntimeException("All ready have this id");
+         }*/
         return new ResponseUtil("OK", "Successfully Registered !", null);
     }
 

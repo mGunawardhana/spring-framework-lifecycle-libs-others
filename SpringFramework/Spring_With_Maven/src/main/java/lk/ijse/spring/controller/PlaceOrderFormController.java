@@ -1,5 +1,7 @@
 package lk.ijse.spring.controller;
 
+import lk.ijse.spring.dto.CustomerDTO;
+import lk.ijse.spring.dto.ItemDTO;
 import lk.ijse.spring.dto.OrderDTO;
 import lk.ijse.spring.dto.OrderDetailsDTO;
 import lk.ijse.spring.util.ResponseUtil;
@@ -16,7 +18,8 @@ import static lk.ijse.spring.db.DB.*;
 public class PlaceOrderFormController {
 
     @GetMapping(path = "/get_all_customers")
-    public ResponseUtil getAllCustomersInToTheCombo() {
+    public ResponseUtil getAllCustomersInToTheCombo(@ModelAttribute CustomerDTO customerDTO) {
+        customerList.add(customerDTO);
         return new ResponseUtil("OK", "Successfully Loaded ! ", customerList);
     }
 

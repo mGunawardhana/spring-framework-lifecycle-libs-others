@@ -14,12 +14,6 @@ public class ItemController {
     @PostMapping()
     public ResponseUtil saveItem(@ModelAttribute ItemDTO itemDTO) {
         itemList.add(itemDTO);
-
-        System.out.println("itemDTO to String - "+itemDTO.toString());
-
-        System.out.println("itemList to String - "+itemList.toString());
-
-
         return new ResponseUtil("OK", "Successfully Registered !", "");
     }
 

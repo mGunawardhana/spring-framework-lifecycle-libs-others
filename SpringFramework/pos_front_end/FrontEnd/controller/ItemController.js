@@ -30,7 +30,7 @@ function saveItem() {
 /** delete item option */
 $("#deleteItemBtn").on('click', function () {
     $.ajax({
-        url: baseURL + "item",
+        url: baseURL+"?id=itemId",
         method: "delete",
         dataType: "json",
         success: function (resp) {
