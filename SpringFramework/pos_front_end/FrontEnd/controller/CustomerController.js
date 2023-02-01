@@ -65,7 +65,7 @@ $("#updateCustomerBtn").on('click', function () {
     }
 
     $.ajax({
-        url: baseURL + "customer",
+        url: baseURL + "update_customer",
         method: "put",
         contentType: "application/json",
         data: JSON.stringify(customerObj),

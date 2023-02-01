@@ -1,6 +1,7 @@
 package lk.ijse.spring.controller;
 
 import lk.ijse.spring.dto.CustomerDTO;
+import lk.ijse.spring.dto.ItemDTO;
 import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,8 +27,16 @@ public class CustomerController {
         return null;
     }
 
-    @PutMapping()
+    @PutMapping("update_customer")
     public ResponseUtil updateCustomer(@RequestBody CustomerDTO customerDTO) {
+        CustomerDTO searchCustomer = ifExistsCustomer(customerDTO.getId());
+        if (searchCustomer != null) {
+            searchCustomer.setName(customerDTO.getName());
+            searchCustomer.setAddress(customerDTO.getAddress());
+            searchCustomer.setContact(customerDTO.getContact());
+        } else {
+            throw new RuntimeException("Cannot update item");
+        }
         return new ResponseUtil("OK", "Successfully updated ! " + customerDTO.getId(), "");
     }
 

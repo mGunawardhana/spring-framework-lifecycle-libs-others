@@ -39,8 +39,6 @@ public class ItemController {
         } else {
             throw new RuntimeException("Cannot update item");
         }
-
-
         return new ResponseUtil("OK", "Successfully updated ! " + itemDTO.getItemId(), "");
     }
 
