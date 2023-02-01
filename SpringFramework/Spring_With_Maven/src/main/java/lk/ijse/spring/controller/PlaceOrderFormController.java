@@ -30,6 +30,7 @@ public class PlaceOrderFormController {
 
     @GetMapping("/load_all_order_details_table")
     public ResponseUtil getOrderDetails() {
+
         return new ResponseUtil("OK", "Successfully Loaded ! ", order_details_list);
     }
 

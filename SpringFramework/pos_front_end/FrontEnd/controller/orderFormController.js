@@ -251,6 +251,7 @@ function getItemDetails() {
         let quantity = $("#orderTblBody").children().eq(i).children(":eq(3)").text();
         let total = $("#orderTblBody").children().eq(i).children(":eq(4)").text();
         array.push({
+            order_id:$("#txtOrderID").val(),
             item_code: code,
             item_name: name,
             unit_price: price,
@@ -297,6 +298,7 @@ function loadAllOrder() {
 function loadAllOrderDetailsForm() {
     $("#tblOrderDetails").empty();
     $.ajax({
+        /*let baseURL = "http://localhost:8080/Spring_With_Maven_war/place_order";*/
         url: baseURL + "/load_all_order_details_table",
         success: function (res) {
 
