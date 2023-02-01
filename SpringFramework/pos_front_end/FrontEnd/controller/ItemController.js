@@ -14,7 +14,7 @@ $("#addItemBtn").on('click', function () {
 function saveItem() {
     let formData = $("#itemFormController").serialize();
     $.ajax({
-        url: baseURL + "item",
+        url: baseURL ,
         method: "post",
         data: formData,
         dataType: "json",

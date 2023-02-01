@@ -11,10 +11,16 @@ import static lk.ijse.spring.db.DB.itemList;
 @RequestMapping("item")
 public class ItemController {
 
-    @PostMapping
+    @PostMapping()
     public ResponseUtil saveItem(@ModelAttribute ItemDTO itemDTO) {
         itemList.add(itemDTO);
-        return new ResponseUtil("OK", "Successfully Registered !", null);
+
+        System.out.println("itemDTO to String - "+itemDTO.toString());
+
+        System.out.println("itemList to String - "+itemList.toString());
+
+
+        return new ResponseUtil("OK", "Successfully Registered !", "");
     }
 
     @DeleteMapping
@@ -24,7 +30,7 @@ public class ItemController {
 
     @PutMapping
     public ResponseUtil updateItem(@RequestBody ItemDTO itemDTO) {
-        return new ResponseUtil("OK", "Successfully updated ! " + itemDTO.getItemId(), null);
+        return new ResponseUtil("OK", "Successfully updated ! " + itemDTO.getItemId(), "");
     }
 
     @GetMapping("item")

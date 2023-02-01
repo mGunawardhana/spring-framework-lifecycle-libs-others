@@ -6,7 +6,6 @@ import lk.ijse.spring.util.ResponseUtil;
 import lombok.SneakyThrows;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static lk.ijse.spring.db.DB.*;
@@ -32,16 +31,10 @@ public class PlaceOrderFormController {
         return new ResponseUtil("OK", "Successfully Loaded ! ", order_details_list);
     }
 
-/*    @GetMapping("/load_all_orders_table")
-    public ResponseUtil getOrder(@RequestBody OrderDTO orderDTO) {
-
-        ArrayList<OrderDTO> order = new ArrayList<OrderDTO>();
-
-
-        orderList.add(orderDTO);
-
+    @GetMapping("/load_all_orders_table")
+    public ResponseUtil getOrder() {
         return new ResponseUtil("OK", "Successfully Loaded ! ", orderList);
-    }*/
+    }
 
     @SneakyThrows
     @PostMapping("/get_transaction_details")
@@ -50,11 +43,36 @@ public class PlaceOrderFormController {
         List<OrderDetailsDTO> orderDetailsDTOList = orderDTO.getFullObj();
 
         for (OrderDetailsDTO orderDetailsDTO : orderDetailsDTOList) {
-
             order_details_list.add(orderDetailsDTO);
         }
+
         orderList.add(orderDTO);
         return new ResponseUtil("OK", "Order Confirmed!", orderDTO);
     }
+
+
+
+
+
+
+
+/*    public String getOrderId() throws ClassNotFoundException {
+        ResultSet resultSet = orderList.get()
+        if (set.next()) {
+            int tempId = Integer.parseInt(set.getString(1).split("-")[1]);
+
+            tempId = tempId + 1;
+            if (tempId <= 9) {
+                return "O-00" + tempId;
+            } else if (tempId <= 99) {
+                return "O-0" + tempId;
+            } else {
+                return "O-" + tempId;
+            }
+        } else {
+            return "O-001";
+        }
+
+    }*/
 
 }
