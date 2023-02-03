@@ -5,5 +5,9 @@
     <file url="file://$PROJECT_DIR$/SpringFramework/Spring_With_Maven/spring_with_maven/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringFramework/Spring_With_Maven/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringFramework/Spring_With_Maven/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringFramework/data_jpa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringFramework/data_jpa/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringFramework/spring_data_jpa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringFramework/spring_data_jpa/src/main/resources" charset="UTF-8" />
   </component>
 </project>
