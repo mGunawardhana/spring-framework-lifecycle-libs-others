@@ -26,51 +26,29 @@ public class ItemController {
 
     @PostMapping()
     public ResponseUtil saveItem(@ModelAttribute ItemDTO itemDTO) {
-        if (itemRepo.existsById(itemDTO.getItemId())){
-            throw new RuntimeException("Customer Already Exist !");
-        }else {
-            itemRepo.save(modelMapper.map(itemDTO, Item.class));
-        }        return new ResponseUtil("OK", "Successfully Registered !", "");
+        if (itemRepo.existsById(itemDTO.getItemId())) {throw new RuntimeException("Customer Already Exist !");
+        } else {itemRepo.save(modelMapper.map(itemDTO, Item.class));}
+        return new ResponseUtil("OK", "Successfully Registered !", "");
     }
 
     @DeleteMapping
     public ResponseUtil deleteItem(String itemId) {
-        if (itemRepo.existsById(itemId)){
-            itemRepo.deleteById(itemId);
-        }else{
-            throw new RuntimeException("No such a customer !");
-        }
+        if (itemRepo.existsById(itemId)) {itemRepo.deleteById(itemId);} else
+        { throw new RuntimeException("No such a customer !"); }
         return new ResponseUtil("OK", "Successfully Deleted ! " + itemId, null);
     }
 
     @PutMapping("update")
     public ResponseUtil updateItem(@RequestBody ItemDTO itemDTO) {
-        ItemDTO searchItem = ifExistsItem(itemDTO.getItemId());
-        if (searchItem != null) {
-            searchItem.setItemName(itemDTO.getItemName());
-            searchItem.setUnitPrice(itemDTO.getUnitPrice());
-            searchItem.setQty(itemDTO.getQty());
-        } else {
-            throw new RuntimeException("Cannot update item");
-        }
+        if (itemRepo.existsById(itemDTO.getItemId())) {itemRepo.save(modelMapper.map(itemDTO, Item.class));
+        } else {throw new RuntimeException("Cannot find these customer id !");}
         return new ResponseUtil("OK", "Successfully updated ! " + itemDTO.getItemId(), "");
     }
 
     @GetMapping("item")
     public ResponseUtil getAllItem() {
-        ArrayList<ItemDTO> mapper= modelMapper.map(
-                itemRepo.findAll(), new TypeToken<ArrayList<ItemDTO>>() {}.getType());
+        ArrayList<ItemDTO> mapper = modelMapper.map(itemRepo.findAll(), new TypeToken<ArrayList<ItemDTO>>() {
+        }.getType());
         return new ResponseUtil("OK", "Successfully Loaded ! ", mapper);
     }
-
-    public ItemDTO ifExistsItem(String itemId) {
-        for (ItemDTO ItemDTO : itemList) {
-            if (ItemDTO.getItemId().equals(itemId)) {
-                return ItemDTO;
-            }
-        }
-        return null;
-    }
-
-
 }
