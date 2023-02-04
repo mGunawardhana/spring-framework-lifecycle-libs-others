@@ -1,6 +1,6 @@
 package lk.ijse.dto;
 
-import lk.ijse.spring.dto.OrderDetailsDTO;
+import lk.ijse.dto.OrderDetailsDTO;
 import lombok.*;
 
 import java.util.List;

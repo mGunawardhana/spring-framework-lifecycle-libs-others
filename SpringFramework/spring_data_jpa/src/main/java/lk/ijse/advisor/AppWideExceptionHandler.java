@@ -1,7 +1,7 @@
 package lk.ijse.advisor;
 
 
-import lk.ijse.spring.util.ResponseUtil;
+import lk.ijse.util.ResponseUtil;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ExceptionHandler;

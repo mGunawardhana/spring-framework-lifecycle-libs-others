@@ -1,9 +1,9 @@
 package lk.ijse.db;
 
-import lk.ijse.spring.dto.CustomerDTO;
-import lk.ijse.spring.dto.ItemDTO;
-import lk.ijse.spring.dto.OrderDTO;
-import lk.ijse.spring.dto.OrderDetailsDTO;
+import lk.ijse.dto.CustomerDTO;
+import lk.ijse.dto.ItemDTO;
+import lk.ijse.dto.OrderDTO;
+import lk.ijse.dto.OrderDetailsDTO;
 
 import java.util.ArrayList;
 

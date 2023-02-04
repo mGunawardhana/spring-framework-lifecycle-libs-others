@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/SpringFramework/spring_data_jpa" />
     <file type="web" url="file://$PROJECT_DIR$/SpringFramework/Spring_With_Maven" />
   </component>
   <component name="MavenProjectsManager">

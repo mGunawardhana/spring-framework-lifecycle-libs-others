@@ -1,10 +1,10 @@
 package lk.ijse.controller;
 
-import lk.ijse.spring.dto.ItemDTO;
-import lk.ijse.spring.util.ResponseUtil;
+import lk.ijse.dto.ItemDTO;
+import lk.ijse.util.ResponseUtil;
 import org.springframework.web.bind.annotation.*;
 
-import static lk.ijse.spring.db.DB.itemList;
+import static lk.ijse.db.DB.itemList;
 
 @RestController
 @CrossOrigin

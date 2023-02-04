@@ -5,7 +5,7 @@
  * what's app - 071 - 9043372
  */
 
-let baseURL = "http://localhost:8080/Spring_With_Maven_war/customer/";
+let baseURL = "http://localhost:8080/spring_data_jpa_war/customer/";
 
 getAllCustomers();
 

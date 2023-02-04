@@ -5,7 +5,8 @@
  *  * what's app - 071 - 9043372
  *
  */
-let baseURL = "http://localhost:8080/Spring_With_Maven_war/place_order";
+let baseURL = "http://localhost:8080/spring_data_jpa_war/place_order";
+// http://localhost:8080/spring_data_jpa_war/
 
 /** array for storing order details */
 let orderDetails = [];

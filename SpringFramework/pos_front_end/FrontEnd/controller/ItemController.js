@@ -3,7 +3,7 @@
  * Contact email - mrgunawardhana27368@gmail.com
  * what's app - 071 - 9043372
  */
-let baseURL = "http://localhost:8080/Spring_With_Maven_war/item/";
+let baseURL = "http://localhost:8080/spring_data_jpa_war/item/";
 getAllItems();
 
 /** save item option */

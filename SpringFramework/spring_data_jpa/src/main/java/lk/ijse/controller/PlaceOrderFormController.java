@@ -1,16 +1,16 @@
 package lk.ijse.controller;
 
-import lk.ijse.spring.dto.CustomerDTO;
-import lk.ijse.spring.dto.ItemDTO;
-import lk.ijse.spring.dto.OrderDTO;
-import lk.ijse.spring.dto.OrderDetailsDTO;
-import lk.ijse.spring.util.ResponseUtil;
+import lk.ijse.dto.CustomerDTO;
+import lk.ijse.dto.ItemDTO;
+import lk.ijse.dto.OrderDTO;
+import lk.ijse.dto.OrderDetailsDTO;
+import lk.ijse.util.ResponseUtil;
 import lombok.SneakyThrows;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import static lk.ijse.spring.db.DB.*;
+import static lk.ijse.db.DB.*;
 
 @RestController
 @CrossOrigin
