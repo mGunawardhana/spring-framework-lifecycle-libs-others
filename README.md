@@ -8,3 +8,23 @@
 ![Screenshot (1718)](https://user-images.githubusercontent.com/100486080/216781963-7ceb7c0c-8eb1-4971-928e-cdaba6f1e3aa.png)
 ![Screenshot (1716)](https://user-images.githubusercontent.com/100486080/216781967-b3eb1a95-1d71-4675-8e42-8e1f18c0d483.png)
 ![Screenshot (1720)](https://user-images.githubusercontent.com/100486080/216781968-72a8d135-3cd4-43dc-8c49-fda41d262dfd.png)
+
+<br>
+
+<div align="center">
+
+![repo size](https://img.shields.io/github/repo-size/mGunawardhana/SpringFramework?style=for-the-badge) &nbsp;
+![GitHub Last Commit](https://img.shields.io/github/last-commit/mGunawardhana/SpringFramework?style=for-the-badge) &nbsp;
+![GitHub](https://img.shields.io/github/license/mGunawardhana/SpringFramework?style=for-the-badge) &nbsp;
+![GitHub Watchers](https://img.shields.io/github/watchers/mGunawardhana/SpringFramework?style=for-the-badge) &nbsp;
+
+</div>
+
+<br><br>
+
+<div align="center">
+
+## © 2022 ɢᴜɴᴀᴡᴀʀᴅʜᴀɴᴀ,ɪɴᴄ. ᴀʟʟ ʀɪɢʜᴛꜱ ʀᴇꜱᴇʀᴠᴇᴅ.
+
+</div>
+
