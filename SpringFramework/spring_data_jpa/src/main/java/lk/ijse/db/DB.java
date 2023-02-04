@@ -12,7 +12,7 @@ public class DB {
     public static ArrayList<CustomerDTO> customerList = new ArrayList<>();
 */
 
-    public static ArrayList<ItemDTO> itemList = new ArrayList<>();
+/*    public static ArrayList<ItemDTO> itemList = new ArrayList<>();*/
 
     public static ArrayList<OrderDetailsDTO> order_details_list = new ArrayList<>();
 

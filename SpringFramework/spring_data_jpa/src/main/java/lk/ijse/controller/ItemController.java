@@ -4,7 +4,7 @@ import lk.ijse.dto.ItemDTO;
 import lk.ijse.util.ResponseUtil;
 import org.springframework.web.bind.annotation.*;
 
-import static lk.ijse.db.DB.itemList;
+
 
 @RestController
 @CrossOrigin

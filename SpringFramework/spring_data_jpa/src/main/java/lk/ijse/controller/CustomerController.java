@@ -49,9 +49,7 @@ public class CustomerController {
     @GetMapping("customer")
     public ResponseUtil getAllCustomers() {
         ArrayList<CustomerDTO> mapper= modelMapper.map(
-                customerRepo.findAll(),
-                new TypeToken<ArrayList<CustomerDTO>>() {}.getType()
-        );
+                customerRepo.findAll(), new TypeToken<ArrayList<CustomerDTO>>() {}.getType());
         return new ResponseUtil("OK", "Successfully Loaded ! ",mapper);
     }
 
