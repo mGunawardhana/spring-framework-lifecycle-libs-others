@@ -32,12 +32,10 @@ public class ItemController {
 
     @DeleteMapping
     public ResponseUtil deleteItem(String itemId) {
-        System.out.println(itemId);
-        ItemDTO ItemDTO = ifExistsItem(itemId);
-        if (ItemDTO != null) {
-            itemList.remove(ItemDTO);
-        } else {
-            throw new RuntimeException("Can't find Item");
+        if (itemRepo.existsById(itemId)){
+            itemRepo.deleteById(itemId);
+        }else{
+            throw new RuntimeException("No such a customer !");
         }
         return new ResponseUtil("OK", "Successfully Deleted ! " + itemId, null);
     }
