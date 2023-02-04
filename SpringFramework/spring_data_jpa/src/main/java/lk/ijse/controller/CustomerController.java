@@ -2,7 +2,10 @@ package lk.ijse.controller;
 
 import lk.ijse.dto.CustomerDTO;
 import lk.ijse.dto.ItemDTO;
+import lk.ijse.entity.Customer;
+import lk.ijse.repo.CustomerRepo;
 import lk.ijse.util.ResponseUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import static lk.ijse.db.DB.customerList;
@@ -11,10 +14,19 @@ import static lk.ijse.db.DB.customerList;
 @CrossOrigin
 @RequestMapping("customer")
 public class CustomerController {
+    @Autowired
+    private CustomerRepo customerRepo;
 
     @PostMapping("save_customer")
     public ResponseUtil saveCustomer(@ModelAttribute CustomerDTO customerDTO) {
-        customerList.add(customerDTO);
+        customerRepo.save(
+                new Customer(
+                customerDTO.getId(),
+                customerDTO.getName(),
+                customerDTO.getAddress(),
+                customerDTO.getContact()
+        ));
+
         return new ResponseUtil("OK", "Successfully Registered !", "");
     }
 
