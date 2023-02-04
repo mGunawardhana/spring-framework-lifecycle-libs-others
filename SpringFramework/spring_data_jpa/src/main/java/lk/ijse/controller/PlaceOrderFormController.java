@@ -19,7 +19,7 @@ public class PlaceOrderFormController {
 
     @GetMapping(path = "/get_all_customers")
     public ResponseUtil getAllCustomersInToTheCombo(@ModelAttribute CustomerDTO customerDTO) {
-        return new ResponseUtil("OK", "Successfully Loaded ! ", customerList);
+        return new ResponseUtil("OK", "Successfully Loaded ! ", "");
     }
 
     @GetMapping("/get_all_items")
@@ -30,7 +30,6 @@ public class PlaceOrderFormController {
 
     @GetMapping("/load_all_order_details_table")
     public ResponseUtil getOrderDetails() {
-
         return new ResponseUtil("OK", "Successfully Loaded ! ", order_details_list);
     }
 

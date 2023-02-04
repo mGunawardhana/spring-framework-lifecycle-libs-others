@@ -8,7 +8,9 @@ import lk.ijse.dto.OrderDetailsDTO;
 import java.util.ArrayList;
 
 public class DB {
+/*
     public static ArrayList<CustomerDTO> customerList = new ArrayList<>();
+*/
 
     public static ArrayList<ItemDTO> itemList = new ArrayList<>();
 
