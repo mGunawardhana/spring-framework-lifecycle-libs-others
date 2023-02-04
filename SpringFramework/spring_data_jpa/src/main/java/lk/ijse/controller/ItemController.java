@@ -1,14 +1,17 @@
 package lk.ijse.controller;
 
+import lk.ijse.dto.CustomerDTO;
 import lk.ijse.dto.ItemDTO;
 import lk.ijse.entity.Customer;
 import lk.ijse.entity.Item;
 import lk.ijse.repo.ItemRepo;
 import lk.ijse.util.ResponseUtil;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 
 
 @RestController
@@ -55,11 +58,9 @@ public class ItemController {
 
     @GetMapping("item")
     public ResponseUtil getAllItem() {
-        if (itemList.isEmpty()) {
-            itemList.add(new ItemDTO("I00-001", "Choco", 1000, 1250.00));
-            itemList.add(new ItemDTO("I00-002", "Milk", 1000, 1300.00));
-        }
-        return new ResponseUtil("OK", "Successfully Loaded ! ", itemList);
+        ArrayList<ItemDTO> mapper= modelMapper.map(
+                itemRepo.findAll(), new TypeToken<ArrayList<ItemDTO>>() {}.getType());
+        return new ResponseUtil("OK", "Successfully Loaded ! ", mapper);
     }
 
     public ItemDTO ifExistsItem(String itemId) {
