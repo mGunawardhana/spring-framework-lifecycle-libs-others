@@ -1,8 +1,8 @@
 package lk.ijse.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 
@@ -11,8 +11,6 @@ import javax.sql.DataSource;
 @Configuration
 public class JPAConfig {
 
-    @Autowired
-    private DataSource ds;
 
     /*introducing LocalContainerEntityManagerFactoryBean in the parent context */
     @Bean
@@ -25,8 +23,13 @@ public class JPAConfig {
     }
 
     @Bean
-    public DataSource dataSource(){
-
+    public DataSource dataSource() {
+        DriverManagerDataSource ds = new DriverManagerDataSource();
+        ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        ds.setUrl("jdbc:mysql://localhost:3306/data_jpa?createDatabaseIfNotExists=true");
+        ds.setUsername("root");
+        ds.setPassword("1234");
+        return ds;
     }
 
 }
