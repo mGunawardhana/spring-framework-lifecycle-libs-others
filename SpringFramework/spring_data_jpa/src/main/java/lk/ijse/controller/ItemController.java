@@ -1,7 +1,12 @@
 package lk.ijse.controller;
 
 import lk.ijse.dto.ItemDTO;
+import lk.ijse.entity.Customer;
+import lk.ijse.entity.Item;
+import lk.ijse.repo.ItemRepo;
 import lk.ijse.util.ResponseUtil;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -10,11 +15,19 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin
 @RequestMapping("item")
 public class ItemController {
+    @Autowired
+    private ItemRepo itemRepo;
+
+    @Autowired
+    private ModelMapper modelMapper;
 
     @PostMapping()
     public ResponseUtil saveItem(@ModelAttribute ItemDTO itemDTO) {
-        itemList.add(itemDTO);
-        return new ResponseUtil("OK", "Successfully Registered !", "");
+        if (itemRepo.existsById(itemDTO.getItemId())){
+            throw new RuntimeException("Customer Already Exist !");
+        }else {
+            itemRepo.save(modelMapper.map(itemDTO, Item.class));
+        }        return new ResponseUtil("OK", "Successfully Registered !", "");
     }
 
     @DeleteMapping
