@@ -4,10 +4,15 @@ import lk.ijse.dto.CustomerDTO;
 import lk.ijse.dto.ItemDTO;
 import lk.ijse.dto.OrderDTO;
 import lk.ijse.dto.OrderDetailsDTO;
+import lk.ijse.repo.CustomerRepo;
 import lk.ijse.util.ResponseUtil;
 import lombok.SneakyThrows;
+import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static lk.ijse.db.DB.*;
@@ -16,14 +21,21 @@ import static lk.ijse.db.DB.*;
 @CrossOrigin
 @RequestMapping("/place_order")
 public class PlaceOrderFormController {
+    @Autowired
+    private CustomerRepo customerRepo;
+    @Autowired
+    private ModelMapper modelMapper;
 
     @GetMapping(path = "/get_all_customers")
     public ResponseUtil getAllCustomersInToTheCombo(@ModelAttribute CustomerDTO customerDTO) {
-        return new ResponseUtil("OK", "Successfully Loaded ! ", "");
+        ArrayList<CustomerDTO> mapper= modelMapper.map(
+                customerRepo.findAll(), new TypeToken<ArrayList<CustomerDTO>>() {}.getType());
+        return new ResponseUtil("OK", "Successfully Loaded ! ", mapper);
     }
 
     @GetMapping("/get_all_items")
     public ResponseUtil getAllItemsInToTheCombo() {
+
         return new ResponseUtil("OK", "Successfully Loaded ! ", "");
     }
 

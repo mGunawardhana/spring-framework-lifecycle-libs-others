@@ -37,20 +37,15 @@ public class CustomerController {
 
 
 
-/*    @PutMapping("update_customer")
+    @PutMapping("update_customer")
     public ResponseUtil updateCustomer(@RequestBody CustomerDTO customerDTO) {
         if (customerRepo.existsById(customerDTO.getId())){
             customerRepo.save(modelMapper.map(customerDTO, Customer.class));
         }else {
-            throw new ("Cannot find these customer id !");
+            throw new RuntimeException("Cannot find these customer id !");
         }
         return new ResponseUtil("OK", "Successfully updated ! " + customerDTO.getId(), "");
-    }*/
-
-
-
-
-
+    }
 
     @GetMapping("customer")
     public ResponseUtil getAllCustomers() {
