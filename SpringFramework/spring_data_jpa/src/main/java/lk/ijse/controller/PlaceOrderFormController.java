@@ -5,6 +5,7 @@ import lk.ijse.dto.ItemDTO;
 import lk.ijse.dto.OrderDTO;
 import lk.ijse.dto.OrderDetailsDTO;
 import lk.ijse.repo.CustomerRepo;
+import lk.ijse.repo.ItemRepo;
 import lk.ijse.util.ResponseUtil;
 import lombok.SneakyThrows;
 import org.modelmapper.ModelMapper;
@@ -25,6 +26,9 @@ public class PlaceOrderFormController {
     private CustomerRepo customerRepo;
     @Autowired
     private ModelMapper modelMapper;
+    @Autowired
+    private ItemRepo itemRepo;
+
 
     @GetMapping(path = "/get_all_customers")
     public ResponseUtil getAllCustomersInToTheCombo(@ModelAttribute CustomerDTO customerDTO) {
@@ -35,8 +39,9 @@ public class PlaceOrderFormController {
 
     @GetMapping("/get_all_items")
     public ResponseUtil getAllItemsInToTheCombo() {
-
-        return new ResponseUtil("OK", "Successfully Loaded ! ", "");
+        ArrayList<ItemDTO> mapper = modelMapper.map(itemRepo.findAll(), new TypeToken<ArrayList<ItemDTO>>() {
+        }.getType());
+        return new ResponseUtil("OK", "Successfully Loaded ! ", mapper);
     }
 
 
