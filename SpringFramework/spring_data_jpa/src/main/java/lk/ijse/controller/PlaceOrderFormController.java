@@ -24,7 +24,7 @@ public class PlaceOrderFormController {
 
     @GetMapping("/get_all_items")
     public ResponseUtil getAllItemsInToTheCombo() {
-        return new ResponseUtil("OK", "Successfully Loaded ! ", itemList);
+        return new ResponseUtil("OK", "Successfully Loaded ! ", "");
     }
 
 
@@ -58,11 +58,12 @@ public class PlaceOrderFormController {
 
 
 
-/*    public String getOrderId() throws ClassNotFoundException {
-        ResultSet resultSet = orderList.get()
-        if (set.next()) {
-            int tempId = Integer.parseInt(set.getString(1).split("-")[1]);
 
+
+/*    public String getOrderId() throws SQLException {
+        ResultSet resultSet = orderList.get();
+        if (resultSet.next()) {
+            int tempId = Integer.parseInt(resultSet.getString(1).split("-")[1]);
             tempId = tempId + 1;
             if (tempId <= 9) {
                 return "O-00" + tempId;
@@ -74,7 +75,7 @@ public class PlaceOrderFormController {
         } else {
             return "O-001";
         }
-
     }*/
+
 
 }

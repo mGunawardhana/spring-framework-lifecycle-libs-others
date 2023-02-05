@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
 Created-By: IntelliJ IDEA
-Built-By: Dell
-Build-Jdk: 17.0.5
+Built-By: mrgun
+Build-Jdk: 19.0.1
 
