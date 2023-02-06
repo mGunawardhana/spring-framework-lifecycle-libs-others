@@ -6,9 +6,7 @@ import java.io.Serializable;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Setter
-@Getter
-@ToString
+@Data
 public class OrderItem_PK implements Serializable {
     private String order_id;
     private String item_code;

@@ -3,9 +3,10 @@ package lk.ijse.controller;
 import lk.ijse.dto.CustomerDTO;
 import lk.ijse.dto.ItemDTO;
 import lk.ijse.dto.OrderDTO;
-import lk.ijse.dto.OrderDetailsDTO;
+import lk.ijse.entity.Orders;
 import lk.ijse.repo.CustomerRepo;
 import lk.ijse.repo.ItemRepo;
+import lk.ijse.repo.OrderRepo;
 import lk.ijse.util.ResponseUtil;
 import lombok.SneakyThrows;
 import org.modelmapper.ModelMapper;
@@ -14,9 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import static lk.ijse.db.DB.*;
 
 @RestController
 @CrossOrigin
@@ -29,11 +28,15 @@ public class PlaceOrderFormController {
     @Autowired
     private ItemRepo itemRepo;
 
+    @Autowired
+    private OrderRepo orderRepo;
+
 
     @GetMapping(path = "/get_all_customers")
     public ResponseUtil getAllCustomersInToTheCombo(@ModelAttribute CustomerDTO customerDTO) {
-        ArrayList<CustomerDTO> mapper= modelMapper.map(
-                customerRepo.findAll(), new TypeToken<ArrayList<CustomerDTO>>() {}.getType());
+        ArrayList<CustomerDTO> mapper = modelMapper.map(
+                customerRepo.findAll(), new TypeToken<ArrayList<CustomerDTO>>() {
+                }.getType());
         return new ResponseUtil("OK", "Successfully Loaded ! ", mapper);
     }
 
@@ -47,26 +50,19 @@ public class PlaceOrderFormController {
 
     @GetMapping("/load_all_order_details_table")
     public ResponseUtil getOrderDetails() {
-        return new ResponseUtil("OK", "Successfully Loaded ! ", order_details_list);
+        return new ResponseUtil("OK", "Successfully Loaded ! ", "");
     }
 
     @GetMapping("/load_all_orders_table")
     public ResponseUtil getOrder() {
-        return new ResponseUtil("OK", "Successfully Loaded ! ", orderList);
+        return new ResponseUtil("OK", "Successfully Loaded ! ", "");
     }
 
-    @SneakyThrows
     @PostMapping("/get_transaction_details")
     public ResponseUtil getTransActionDetails(@RequestBody OrderDTO orderDTO) {
-
-        List<OrderDetailsDTO> orderDetailsDTOList = orderDTO.getFullObj();
-
-        for (OrderDetailsDTO orderDetailsDTO : orderDetailsDTOList) {
-            order_details_list.add(orderDetailsDTO);
-        }
-
-        orderList.add(orderDTO);
-        return new ResponseUtil("OK", "Order Confirmed!", orderDTO);
+        Orders save = orderRepo.save(modelMapper.map(orderDTO, Orders.class));
+        System.out.println(save.toString());
+        return new ResponseUtil("OK", "Order Confirmed!", save);
     }
 
 

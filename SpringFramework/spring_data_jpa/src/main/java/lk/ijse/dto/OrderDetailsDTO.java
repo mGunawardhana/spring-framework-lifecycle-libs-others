@@ -11,10 +11,10 @@ import lombok.*;
 @EqualsAndHashCode
 public class OrderDetailsDTO {
     private String order_id;
-    private String item_code;//TODO working ....
-    private String item_name;//TODO working ....
+    private String item_code;
+    private String item_name;
     private double unit_price;
     private int item_qty;
-    private double item_total;//TODO working ....
+    private double item_total;
 
 }

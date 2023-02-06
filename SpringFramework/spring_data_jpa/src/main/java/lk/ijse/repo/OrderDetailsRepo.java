@@ -1,7 +1,7 @@
 package lk.ijse.repo;
 
-import lk.ijse.entity.Customer;
+import lk.ijse.entity.OrderDetails;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface OrderDetailsRepo extends JpaRepository<Customer,String> {
+public interface OrderDetailsRepo extends JpaRepository<OrderDetails, String> {
 }
