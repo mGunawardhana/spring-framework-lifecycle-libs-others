@@ -34,7 +34,6 @@ public class PlaceOrderFormController {
         return new ResponseUtil("OK", "Successfully Loaded ! ", placeOrderService.loadAllItemsInTheCombo());
     }
 
-
     @GetMapping("/load_all_order_details_table")
     public ResponseUtil getOrderDetails() {
         return new ResponseUtil("OK", "Successfully Loaded ! ", "");
@@ -42,7 +41,7 @@ public class PlaceOrderFormController {
 
     @GetMapping("/load_all_orders_table")
     public ResponseUtil getOrder() {
-        return new ResponseUtil("OK", "Successfully Loaded ! ", "");
+        return new ResponseUtil("OK", "Successfully Loaded ! ","");
     }
 
     @PostMapping("/get_transaction_details")

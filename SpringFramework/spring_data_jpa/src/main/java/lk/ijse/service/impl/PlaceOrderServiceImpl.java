@@ -56,7 +56,7 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
 
     @Override
     public ArrayList<OrderDTO> getAllOrders() {
-        return null;
+        return modelMapper.map(orderRepo.findAll(),new TypeToken<ArrayList<OrderDTO>>(){}.getType());
     }
 
     @Override
