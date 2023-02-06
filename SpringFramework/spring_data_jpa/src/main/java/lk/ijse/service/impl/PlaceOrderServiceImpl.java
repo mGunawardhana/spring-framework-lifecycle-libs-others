@@ -42,7 +42,8 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
 
     @Override
     public ArrayList<ItemDTO> loadAllItemsInTheCombo() {
-        return null;
+        return modelMapper.map(itemRepo.findAll(), new TypeToken<ArrayList<ItemDTO>>() {
+        }.getType());
     }
 
     @Override

@@ -3,16 +3,11 @@ package lk.ijse.controller;
 import lk.ijse.dto.CustomerDTO;
 import lk.ijse.dto.ItemDTO;
 import lk.ijse.dto.OrderDTO;
-import lk.ijse.dto.OrderDetailsDTO;
 import lk.ijse.entity.Item;
 import lk.ijse.entity.OrderDetails;
 import lk.ijse.entity.Orders;
-import lk.ijse.repo.CustomerRepo;
-import lk.ijse.repo.ItemRepo;
-import lk.ijse.repo.OrderDetailsRepo;
-import lk.ijse.repo.OrderRepo;
+import lk.ijse.service.PlaceOrderService;
 import lk.ijse.util.ResponseUtil;
-import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -25,21 +20,18 @@ import java.util.ArrayList;
 @RequestMapping("/place_order")
 public class PlaceOrderFormController {
 
-
-
+    @Autowired
+    public PlaceOrderService placeOrderService;
 
 
     @GetMapping(path = "/get_all_customers")
     public ResponseUtil getAllCustomersInToTheCombo(@ModelAttribute CustomerDTO customerDTO) {
-
-        return new ResponseUtil("OK", "Successfully Loaded ! ", mapper);
+        return new ResponseUtil("OK", "Successfully Loaded ! ", placeOrderService.loadAllCustomersInTheCombo());
     }
 
     @GetMapping("/get_all_items")
     public ResponseUtil getAllItemsInToTheCombo() {
-        ArrayList<ItemDTO> mapper = modelMapper.map(itemRepo.findAll(), new TypeToken<ArrayList<ItemDTO>>() {
-        }.getType());
-        return new ResponseUtil("OK", "Successfully Loaded ! ", mapper);
+        return new ResponseUtil("OK", "Successfully Loaded ! ", placeOrderService.loadAllItemsInTheCombo());
     }
 
 
