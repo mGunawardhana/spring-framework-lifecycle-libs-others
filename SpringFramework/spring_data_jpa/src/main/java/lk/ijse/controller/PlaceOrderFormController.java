@@ -47,8 +47,7 @@ public class PlaceOrderFormController {
 
     @PostMapping("/get_transaction_details")
     public ResponseUtil getTransActionDetails(@RequestBody OrderDTO orderDTO) {
-
-
+        placeOrderService.manageTransAction(orderDTO);
         return new ResponseUtil("OK", "Order Confirmed!", "");
     }
 
