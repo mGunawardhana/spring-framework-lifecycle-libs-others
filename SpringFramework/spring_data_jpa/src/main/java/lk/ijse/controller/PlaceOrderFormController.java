@@ -3,11 +3,13 @@ package lk.ijse.controller;
 import lk.ijse.dto.CustomerDTO;
 import lk.ijse.dto.ItemDTO;
 import lk.ijse.dto.OrderDTO;
+import lk.ijse.dto.OrderDetailsDTO;
 import lk.ijse.entity.Item;
 import lk.ijse.entity.OrderDetails;
 import lk.ijse.entity.Orders;
 import lk.ijse.repo.CustomerRepo;
 import lk.ijse.repo.ItemRepo;
+import lk.ijse.repo.OrderDetailsRepo;
 import lk.ijse.repo.OrderRepo;
 import lk.ijse.util.ResponseUtil;
 import org.modelmapper.ModelMapper;
@@ -30,7 +32,12 @@ public class PlaceOrderFormController {
     private ItemRepo itemRepo;
 
     @Autowired
+    private OrderDetailsRepo orderDetailsRepo;
+
+    @Autowired
     private OrderRepo orderRepo;
+
+
 
 
     @GetMapping(path = "/get_all_customers")
@@ -51,6 +58,8 @@ public class PlaceOrderFormController {
 
     @GetMapping("/load_all_order_details_table")
     public ResponseUtil getOrderDetails() {
+       /* ArrayList<OrderDetailsDTO> mapper = modelMapper.map(orderDetailsRepo.findAll(), new TypeToken<ArrayList<OrderDetailsDTO>>() {
+        }.getType());*/
         return new ResponseUtil("OK", "Successfully Loaded ! ", "");
     }
 
