@@ -3,12 +3,13 @@ package lk.ijse.controller;
 import lk.ijse.dto.CustomerDTO;
 import lk.ijse.dto.ItemDTO;
 import lk.ijse.dto.OrderDTO;
+import lk.ijse.entity.Item;
+import lk.ijse.entity.OrderDetails;
 import lk.ijse.entity.Orders;
 import lk.ijse.repo.CustomerRepo;
 import lk.ijse.repo.ItemRepo;
 import lk.ijse.repo.OrderRepo;
 import lk.ijse.util.ResponseUtil;
-import lombok.SneakyThrows;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,12 +61,19 @@ public class PlaceOrderFormController {
 
     @PostMapping("/get_transaction_details")
     public ResponseUtil getTransActionDetails(@RequestBody OrderDTO orderDTO) {
-        Orders orders = (modelMapper.map(orderDTO, Orders.class));
-        if (orderRepo.existsById(orders.getOrder_id())){
-            throw new RuntimeException("Order Id - "+orders.getOrder_id()+" already exists !");
-        }else {
-            orderRepo.save(orders);
+        Orders orders = modelMapper.map(orderDTO, Orders.class);
+        if (orderRepo.existsById(orders.getOrder_id())) {
+            throw new RuntimeException("Order Id - " + orders.getOrder_id() + " already exists !");
         }
+        orderRepo.save(orders);
+
+
+        for (OrderDetails od : orders.getFullObj()) {
+            Item item = itemRepo.findById(od.getItem_code()).get();
+            item.setQty(item.getQty() - od.getItem_qty());
+            itemRepo.save(item);
+        }
+
         return new ResponseUtil("OK", "Order Confirmed!", "");
     }
 

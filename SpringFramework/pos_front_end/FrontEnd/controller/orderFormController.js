@@ -252,7 +252,7 @@ function getItemDetails() {
         let quantity = $("#orderTblBody").children().eq(i).children(":eq(3)").text();
         let total = $("#orderTblBody").children().eq(i).children(":eq(4)").text();
         array.push({
-            customer_id:$('#txtOrderID').val(),
+            /*customer_id:$('#txtOrderID').val(),*/
             order_id:$("#txtOrderID").val(),
             item_code: code,
             item_name: name,
@@ -265,11 +265,13 @@ function getItemDetails() {
 }
 
 
-/*function refresh() {
+function refresh() {
     loadAllOrder();
     loadAllOrderDetailsForm();
+/*
     location.reload();
-}*/
+*/
+}
 
 function loadAllOrder() {
     $("#tblOrder").empty();
