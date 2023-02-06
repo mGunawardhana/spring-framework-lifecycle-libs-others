@@ -23,7 +23,7 @@ public class CustomerController {
 
     @PutMapping("update_customer")
     public ResponseUtil updateCustomer(@RequestBody CustomerDTO customerDTO) {
-        customerService.saveCustomer(customerDTO);
+        customerService.updateCustomer(customerDTO);
         return new ResponseUtil("OK", "Successfully updated ! " + customerDTO.getId(), "");
     }
 

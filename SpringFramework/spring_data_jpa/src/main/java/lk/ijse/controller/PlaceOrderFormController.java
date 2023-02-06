@@ -24,27 +24,14 @@ import java.util.ArrayList;
 @CrossOrigin
 @RequestMapping("/place_order")
 public class PlaceOrderFormController {
-    @Autowired
-    private CustomerRepo customerRepo;
-    @Autowired
-    private ModelMapper modelMapper;
-    @Autowired
-    private ItemRepo itemRepo;
 
-    @Autowired
-    private OrderDetailsRepo orderDetailsRepo;
-
-    @Autowired
-    private OrderRepo orderRepo;
 
 
 
 
     @GetMapping(path = "/get_all_customers")
     public ResponseUtil getAllCustomersInToTheCombo(@ModelAttribute CustomerDTO customerDTO) {
-        ArrayList<CustomerDTO> mapper = modelMapper.map(
-                customerRepo.findAll(), new TypeToken<ArrayList<CustomerDTO>>() {
-                }.getType());
+
         return new ResponseUtil("OK", "Successfully Loaded ! ", mapper);
     }
 
