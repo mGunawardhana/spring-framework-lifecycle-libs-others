@@ -41,7 +41,7 @@ public class PlaceOrderFormController {
 
     @GetMapping("/load_all_orders_table")
     public ResponseUtil getOrder() {
-        return new ResponseUtil("OK", "Successfully Loaded ! ","");
+        return new ResponseUtil("OK", "Successfully Loaded ! ","ommit");
     }
 
     @PostMapping("/get_transaction_details")
