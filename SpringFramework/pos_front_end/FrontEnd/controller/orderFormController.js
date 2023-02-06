@@ -265,11 +265,11 @@ function getItemDetails() {
 }
 
 
-function refresh() {
+/*function refresh() {
     loadAllOrder();
     loadAllOrderDetailsForm();
-    /*location.reload();*/
-}
+    location.reload();
+}*/
 
 function loadAllOrder() {
     $("#tblOrder").empty();
@@ -289,6 +289,8 @@ function loadAllOrder() {
                 let row = "<tr>" + "<td>" + orderID + "</td>" + "<td>" + orderDate + "</td>" + "<td>" + customerId + "</td>" + "<td>" + customerName + "</td>" + "<td>" + customerContact + "</td>" + "</tr>";
 
                 $("#tblOrder").append(row);
+                loadAllOrder();//TODO /////////////
+                loadAllOrderDetailsForm();//TODO /////////////
             }
         }, error: function (error) {
             let message = JSON.parse(error.responseText).message;
@@ -319,6 +321,8 @@ function loadAllOrderDetailsForm() {
                 let row = "<tr>" + "<td>" + order_id + "</td>" + "<td>" + code + "</td>" + "<td>" + name + "</td>" + "<td>" + price + "</td>" + "<td>" + quantity + "</td>" + "<td>" + total + "</td>" + "</tr>";
 
                 $("#tblOrderDetails").append(row);
+                loadAllOrder();//TODO /////////////
+                loadAllOrderDetailsForm();//TODO /////////////
             }
         }, error: function (error) {
             let message = JSON.parse(error.responseText).message;

@@ -60,9 +60,13 @@ public class PlaceOrderFormController {
 
     @PostMapping("/get_transaction_details")
     public ResponseUtil getTransActionDetails(@RequestBody OrderDTO orderDTO) {
-        Orders save = orderRepo.save(modelMapper.map(orderDTO, Orders.class));
-        System.out.println(save.toString());
-        return new ResponseUtil("OK", "Order Confirmed!", save);
+        Orders orders = (modelMapper.map(orderDTO, Orders.class));
+        if (orderRepo.existsById(orders.getOrder_id())){
+            throw new RuntimeException("Order Id - "+orders.getOrder_id()+" already exists !");
+        }else {
+            orderRepo.save(orders);
+        }
+        return new ResponseUtil("OK", "Order Confirmed!", "");
     }
 
 

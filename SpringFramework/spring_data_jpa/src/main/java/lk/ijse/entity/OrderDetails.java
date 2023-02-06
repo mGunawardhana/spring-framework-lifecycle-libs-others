@@ -17,8 +17,8 @@ public class OrderDetails {
     private String item_code;
     private String item_name;
     private double unit_price;
-/*    private int item_qty;
-    private double item_total;*/
+    private int item_qty;
+    private double item_total;
 
     @ManyToOne
     @JoinColumn(name = "order_id",referencedColumnName = "order_id",insertable = false,updatable = false)
