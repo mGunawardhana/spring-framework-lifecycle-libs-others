@@ -4,6 +4,9 @@ import lk.ijse.dto.CustomerDTO;
 import lk.ijse.dto.ItemDTO;
 import lk.ijse.dto.OrderDTO;
 import lk.ijse.dto.OrderDetailsDTO;
+import lk.ijse.entity.Item;
+import lk.ijse.entity.OrderDetails;
+import lk.ijse.entity.Orders;
 import lk.ijse.repo.CustomerRepo;
 import lk.ijse.repo.ItemRepo;
 import lk.ijse.repo.OrderDetailsRepo;
@@ -57,7 +60,16 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
     }
 
     @Override
-    public void manageTransAction() {
-
+    public void manageTransAction(OrderDTO orderDTO) {
+        Orders orders = modelMapper.map(orderDTO, Orders.class);
+        if (orderRepo.existsById(orders.getOrder_id())) {
+            throw new RuntimeException("Order Id - " + orders.getOrder_id() + " already exists !");
+        }
+        orderRepo.save(orders);
+        for (OrderDetails od : orders.getFullObj()) {
+            Item item = itemRepo.findById(od.getItem_code()).get();
+            item.setQty(item.getQty() - od.getItem_qty());
+            itemRepo.save(item);
+        }
     }
 }

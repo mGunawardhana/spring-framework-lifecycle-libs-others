@@ -37,8 +37,6 @@ public class PlaceOrderFormController {
 
     @GetMapping("/load_all_order_details_table")
     public ResponseUtil getOrderDetails() {
-       /* ArrayList<OrderDetailsDTO> mapper = modelMapper.map(orderDetailsRepo.findAll(), new TypeToken<ArrayList<OrderDetailsDTO>>() {
-        }.getType());*/
         return new ResponseUtil("OK", "Successfully Loaded ! ", "");
     }
 
@@ -49,18 +47,7 @@ public class PlaceOrderFormController {
 
     @PostMapping("/get_transaction_details")
     public ResponseUtil getTransActionDetails(@RequestBody OrderDTO orderDTO) {
-        Orders orders = modelMapper.map(orderDTO, Orders.class);
-        if (orderRepo.existsById(orders.getOrder_id())) {
-            throw new RuntimeException("Order Id - " + orders.getOrder_id() + " already exists !");
-        }
-        orderRepo.save(orders);
 
-
-        for (OrderDetails od : orders.getFullObj()) {
-            Item item = itemRepo.findById(od.getItem_code()).get();
-            item.setQty(item.getQty() - od.getItem_qty());
-            itemRepo.save(item);
-        }
 
         return new ResponseUtil("OK", "Order Confirmed!", "");
     }

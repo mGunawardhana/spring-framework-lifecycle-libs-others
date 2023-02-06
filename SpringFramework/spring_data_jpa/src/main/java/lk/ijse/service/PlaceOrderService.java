@@ -16,6 +16,6 @@ public interface PlaceOrderService {
 
     public ArrayList<OrderDTO> getAllOrders();
 
-    public void manageTransAction();
+    public void manageTransAction(OrderDTO orderDTO);
 
 }
