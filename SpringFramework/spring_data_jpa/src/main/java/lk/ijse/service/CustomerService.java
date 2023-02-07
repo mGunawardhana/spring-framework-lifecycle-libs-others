@@ -5,9 +5,14 @@ import lk.ijse.dto.CustomerDTO;
 import java.util.ArrayList;
 
 public interface CustomerService {
-    public void saveCustomer(CustomerDTO customerDTO);
-    public void updateCustomer(CustomerDTO customerDTO);
-    public void deleteCustomer(String id);
-    public ArrayList<CustomerDTO> getAllCustomers();
+    void saveCustomer(CustomerDTO customerDTO);
+
+    void updateCustomer(CustomerDTO customerDTO);
+
+    void deleteCustomer(String id);
+
+    ArrayList<CustomerDTO> getAllCustomers();
+
+    CustomerDTO searchCustomerByName(String name);
 
 }

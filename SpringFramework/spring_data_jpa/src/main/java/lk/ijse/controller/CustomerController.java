@@ -15,6 +15,12 @@ public class CustomerController {
     @Autowired
     public CustomerService customerService;
 
+    //TODO test this method after the lec ...
+    @GetMapping(path = "{name}")
+    public ResponseUtil getCustomerByName(@PathVariable String name){
+        return new ResponseUtil("OK", "Successfully Registered !", customerService.searchCustomerByName(name));
+    }
+
     @PostMapping("save_customer")
     public ResponseUtil saveCustomer(@ModelAttribute CustomerDTO customerDTO) {
         customerService.saveCustomer(customerDTO);
