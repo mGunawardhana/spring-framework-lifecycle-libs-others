@@ -1,6 +1,7 @@
 package lk.ijse.config;
 
 import lk.ijse.repo.CustomerRepo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -24,6 +25,7 @@ import javax.sql.DataSource;
 @PropertySource("classpath:application.properties")
 public class JPAConfig {
 
+    @Autowired
     private Environment environment;
 
     /*introducing LocalContainerEntityManagerFactoryBean in the parent context */
@@ -42,7 +44,7 @@ public class JPAConfig {
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName(environment.getRequiredProperty("pro.driver"));
         ds.setUrl(environment.getRequiredProperty("pro.url"));
-        ds.setUsername(environment.getRequiredProperty("pro.userName"));
+        ds.setUsername(environment.getRequiredProperty("pro.username"));
         ds.setPassword(environment.getRequiredProperty("pro.password"));
         return ds;
     }
@@ -50,7 +52,7 @@ public class JPAConfig {
     @Bean
     public JpaVendorAdapter jpaVendorAdapter() {
         HibernateJpaVendorAdapter jpaVendorAdapter = new HibernateJpaVendorAdapter();
-        jpaVendorAdapter.setDatabasePlatform(environment.getRequiredProperty("pro.dialect"));
+        jpaVendorAdapter.setDatabasePlatform(environment.getRequiredProperty("pro.dial"));
         jpaVendorAdapter.setDatabase(Database.MYSQL);
         jpaVendorAdapter.setGenerateDdl(true);
         jpaVendorAdapter.setShowSql(true);

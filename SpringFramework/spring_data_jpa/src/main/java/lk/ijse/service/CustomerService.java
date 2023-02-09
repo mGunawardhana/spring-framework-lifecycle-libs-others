@@ -13,6 +13,6 @@ public interface CustomerService {
 
     ArrayList<CustomerDTO> getAllCustomers();
 
-    CustomerDTO searchCustomerByName(String name);
+    public CustomerDTO searchCustomerWithName(String name);
 
 }

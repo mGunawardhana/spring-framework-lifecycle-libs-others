@@ -15,11 +15,11 @@ public class CustomerController {
     @Autowired
     public CustomerService customerService;
 
-    //TODO test this method after the lec ...
+/*    //TODO test this method after the lec ...
     @GetMapping(path = "{name}")
     public ResponseUtil getCustomerByName(@PathVariable String name){
         return new ResponseUtil("OK", "Successfully Registered !", customerService.searchCustomerByName(name));
-    }
+    }*/
 
     @PostMapping("save_customer")
     public ResponseUtil saveCustomer(@ModelAttribute CustomerDTO customerDTO) {
@@ -37,6 +37,13 @@ public class CustomerController {
     public ResponseUtil getAllCustomers() {
         return new ResponseUtil("OK", "Successfully Loaded ! ", customerService.getAllCustomers());
     }
+
+    @GetMapping(path = "/{name}")
+    public ResponseUtil searchCustomerByName(@PathVariable String name) {
+        return new ResponseUtil("OK", "Successfully Loaded ! ", customerService.searchCustomerWithName(name));
+    }
+
+
 
     @DeleteMapping
     public ResponseUtil deleteCustomer(String code) {
