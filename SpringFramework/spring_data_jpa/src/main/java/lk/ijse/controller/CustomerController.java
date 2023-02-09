@@ -40,7 +40,7 @@ public class CustomerController {
 
     @GetMapping(path = "/{name}")
     public ResponseUtil searchCustomerByName(@PathVariable String name) {
-        return new ResponseUtil("OK", "Successfully Loaded ! ", customerService.searchCustomerWithName(name));
+        return new ResponseUtil("OK", "Successfully Loaded ! ","");
     }
 
 

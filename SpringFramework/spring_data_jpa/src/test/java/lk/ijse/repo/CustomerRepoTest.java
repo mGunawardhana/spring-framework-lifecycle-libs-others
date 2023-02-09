@@ -9,6 +9,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.web.WebAppConfiguration;
 
+import java.util.List;
+
 @WebAppConfiguration
 @ContextConfiguration(classes = {WebRootConfig.class})
 @ExtendWith(SpringExtension.class)
@@ -22,4 +24,18 @@ class CustomerRepoTest {
         Customer name = customerRepo.findCustomerByName("maneesha");
         System.out.println(name.toString());
     }
+    @Test
+    void findCustomerById(){
+        Customer customerById = customerRepo.findCustomerById("C00-003");
+        System.out.println(customerById.toString());
+    }
+
+    @Test
+    void getAll(){
+        List<Customer> customersList = customerRepo.methodName();
+        for (Customer customer : customersList) {
+            System.out.println(customer.toString());
+        }
+    }
+
 }

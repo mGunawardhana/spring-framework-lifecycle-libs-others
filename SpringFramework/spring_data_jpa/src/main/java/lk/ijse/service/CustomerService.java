@@ -13,6 +13,5 @@ public interface CustomerService {
 
     ArrayList<CustomerDTO> getAllCustomers();
 
-    public CustomerDTO searchCustomerWithName(String name);
 
 }

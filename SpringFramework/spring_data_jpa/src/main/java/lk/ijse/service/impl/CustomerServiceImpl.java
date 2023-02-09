@@ -53,11 +53,4 @@ public class CustomerServiceImpl implements CustomerService {
         }.getType());
     }
 
-    @Override
-    public CustomerDTO searchCustomerWithName(String name) {
-        Customer customerByName = customerRepo.findCustomerByName(name);
-        return modelMapper.map(customerByName, CustomerDTO.class);
-
-    }
-
 }
