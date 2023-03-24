@@ -4,10 +4,6 @@
 
 ![top-10-reasons-to-use-spring-framework-1](https://user-images.githubusercontent.com/100486080/216781707-934a7e83-9c7e-45ad-95f8-bb4effe771dd.jpg)
 
-![Screenshot (1714)](https://user-images.githubusercontent.com/100486080/216781955-09919d48-81ab-4129-9658-83f34f900f20.png)
-![Screenshot (1718)](https://user-images.githubusercontent.com/100486080/216781963-7ceb7c0c-8eb1-4971-928e-cdaba6f1e3aa.png)
-![Screenshot (1716)](https://user-images.githubusercontent.com/100486080/216781967-b3eb1a95-1d71-4675-8e42-8e1f18c0d483.png)
-![Screenshot (1720)](https://user-images.githubusercontent.com/100486080/216781968-72a8d135-3cd4-43dc-8c49-fda41d262dfd.png)
 
 <br>
 
