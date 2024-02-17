@@ -1,0 +1,632 @@
+repo_name: mGunawardhana/spring-framework-lifecycle-libs-others
+report_id: 7ad544760256d14f722c19b9cf95e5a9
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-17T14:04:32+00:00'
+requested_by: mGunawardhana
+provider: github
+branch: master
+detected_tools_count: 47
+tools:
+- name: CSS 3
+  description: The latest evolution of the Cascading Style Sheets language
+  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others
+  detection_source: Repo Metadata
+- name: Java
+  description: A concurrent, class-based, object-oriented, language specifically designed
+    to have as few implementation dependencies as possible
+  website_url: https://www.java.com
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/995/K85ZWV2F.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others
+  detection_source: Repo Metadata
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others
+  detection_source: Repo Metadata
+- name: SQL
+  description: It is a domain-specific language used in programming
+  website_url: https://en.wikipedia.org/wiki/SQL
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/2271/default_068d33483bba6b81ee13fbd4dc7aab9780896a54.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/script.sql
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/script.sql
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: TypeScript
+  description: A superset of JavaScript that compiles to clean JavaScript output
+  website_url: http://www.typescriptlang.org
+  version: 4.8.3
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1612/bynNY5dJ.jpg
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: Sass
+  description: Syntactically Awesome Style Sheets
+  website_url: http://sass-lang.com/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: CSS Pre-processors / Extensions
+  image_url: https://img.stackshare.io/service/1171/jCR2zNJV.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: jQuery
+  description: The Write Less, Do More, JavaScript Library.
+  website_url: http://jquery.com/
+  version: 3.6.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript UI Libraries
+  image_url: https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: MySQL
+  description: The world's most popular open source database
+  website_url: http://www.mysql.com
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Databases
+  image_url: https://img.stackshare.io/service/1025/logo-mysql-170x170.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/spring_data_jpa/pom.xml
+  detection_source: SpringFramework/spring_data_jpa/pom.xml
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-02-03 18:18:22.000000000 Z
+- name: Spring Data
+  description: Provides a consistent approach to data access – relational, non-relational,
+    map-reduce, and beyond
+  website_url: https://spring.io/projects/spring-data
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Database Tools
+  image_url: https://img.stackshare.io/service/7624/IG6D4Ro2_400x400.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/spring_data_jpa/pom.xml
+  detection_source: SpringFramework/spring_data_jpa/pom.xml
+  last_updated_by: mGunawardhana
+  last_updated_on: 2023-02-09 03:53:28.000000000 Z
+- name: Babel
+  description: Use next generation JavaScript, today.
+  website_url: http://babeljs.io/
+  version: 7.19.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: JavaScript Compilers
+  image_url: https://img.stackshare.io/service/2739/-1wfGjNw.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: Cypress
+  description: When testing is easy, developers build better things faster and with
+    confidence.
+  website_url: https://www.cypress.io/
+  version: 10.8.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/9231/default_66c5c1a197dcd0232e41e4ab6299d119b4e165b3.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: ESLint
+  description: The fully pluggable JavaScript code quality tool
+  website_url: http://eslint.org/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/3337/Q4L7Jncy.jpg
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others
+  detection_source: Repo Metadata
+- name: JUnit
+  description: A programmer-oriented testing framework for Java
+  website_url: http://junit.org/
+  license: EPL-1.0
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Testing Frameworks
+  image_url: https://img.stackshare.io/service/2020/874086.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/spring_data_jpa/pom.xml
+  detection_source: SpringFramework/spring_data_jpa/pom.xml
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-02-03 18:18:22.000000000 Z
+- name: Prettier
+  description: Prettier is an opinionated code formatter.
+  website_url: https://prettier.io/
+  version: 2.7.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: Stylelint
+  description: A mighty, modern CSS linter
+  website_url: http://stylelint.io/
+  version: 14.12.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/5446/V9JsvPul_400x400.jpg
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: gulp
+  description: The streaming build system
+  website_url: http://gulpjs.com/
+  version: 4.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: JS Build Tools / JS Task Runners
+  image_url: https://img.stackshare.io/service/844/iruTC031.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: rollup
+  description: The next-generation JavaScript module bundler
+  website_url: http://rollupjs.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: JS Build Tools / JS Task Runners
+  image_url: https://img.stackshare.io/service/4423/zE8RTn9E_400x400.jpg
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: Apache Camel
+  description: A versatile open source integration framework
+  website_url: https://camel.apache.org/
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Application Hosting
+  sub_category: Platform as a Service
+  image_url: https://img.stackshare.io/service/3276/xWt1RFo6_400x400.jpg
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/spring_data_jpa/src/main/resources/application.properties
+  detection_source: SpringFramework/spring_data_jpa/src/main/resources/application.properties
+  last_updated_by: mGunawardhana
+  last_updated_on: 2023-02-06 18:17:45.000000000 Z
+- name: "@babel/core"
+  description: Babel compiler core
+  package_url: https://www.npmjs.com/@babel/core
+  version: 7.19.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15810/default_004658cda9b38934f2871435e9dc15608c86e8be.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: "@babel/preset-env"
+  description: A Babel preset for each environment
+  package_url: https://www.npmjs.com/@babel/preset-env
+  version: 7.19.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15819/default_98aa227f51aa9d787815ec3fd98d0ab2bfebbb91.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: browser-sync
+  description: Live CSS Reload &amp; Browser Syncing
+  package_url: https://www.npmjs.com/browser-sync
+  version: 2.27.7
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16034/default_a9b6ac3c2fe43713f9a8e43d4668d0352ad0d247.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: eslint-plugin-cypress
+  description: An ESLint plugin for projects using Cypress
+  package_url: https://www.npmjs.com/eslint-plugin-cypress
+  version: 2.12.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/18548/default_0998c3a5bd64540d478b8f189bd9d22c3c17b6a0.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: eslint-plugin-import
+  description: Import with sanity
+  package_url: https://www.npmjs.com/eslint-plugin-import
+  version: 2.26.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15806/default_98aa227f51aa9d787815ec3fd98d0ab2bfebbb91.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: gulp-autoprefixer
+  description: Prefix CSS
+  package_url: https://www.npmjs.com/gulp-autoprefixer
+  version: 8.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16090/default_8725384794b44fe56f31da1d21ae759cf07be7a5.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: gulp-clean-css
+  description: Minify css with clean-css
+  package_url: https://www.npmjs.com/gulp-clean-css
+  version: 4.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16301/default_3b7197abc4df3d7fa7c5292f17b2e6fb0cd1c8d4.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: gulp-concat
+  description: Concatenates files
+  package_url: https://www.npmjs.com/gulp-concat
+  version: 2.6.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15973/default_732016a20524708efe7a4c77497fe9bfeea19ba6.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: gulp-if
+  description: Conditionally run a task
+  package_url: https://www.npmjs.com/gulp-if
+  version: 3.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16211/default_380ae3d73e22c7ca1f42b96479bcd0095dabc0d3.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: gulp-rename
+  description: Rename files
+  package_url: https://www.npmjs.com/gulp-rename
+  version: 2.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15895/default_e4668902f8489350db9b0fb228523a571ef05b26.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: gulp-rollup
+  description: Gulp plugin for Rollup ES6 module bundler
+  package_url: https://www.npmjs.com/gulp-rollup
+  version: 2.16.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17035/default_88e2e076a71afdc1de87ad42c80c1606f2689af1.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: gulp-uglify
+  description: Minify files with UglifyJS
+  package_url: https://www.npmjs.com/gulp-uglify
+  version: 3.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15910/default_e0a4fb1126d7400f419f0931cf1669947a5bc552.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: merge2
+  description: Merge multiple streams into one stream in sequence or parallel
+  package_url: https://www.npmjs.com/merge2
+  version: 1.2.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16389/default_f1e46d83300118af569c79b07f85830bc788c2d1.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: postcss-scss
+  description: SCSS parser for PostCSS
+  package_url: https://www.npmjs.com/postcss-scss
+  version: 4.0.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16233/default_dc80ff0a17bac19253430a4f0f586714841116db.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: replace-in-file
+  description: A simple utility to quickly replace text in one or more files
+  package_url: https://www.npmjs.com/replace-in-file
+  version: 6.3.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16434/default_d73092129e1cde5ea9f47f22e2d7c3db7bd6da8d.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: rollup-plugin-babel
+  description: Seamless integration between Rollup and Babel
+  package_url: https://www.npmjs.com/rollup-plugin-babel
+  version: 4.3.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15877/default_7c39a83d4acd952df89b1ebfdb94c8646324fbf1.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  detection_source: SpringFramework/pos_front_end/FrontEnd/web/assets/swal-lib/package/package.json
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-28 15:54:52.000000000 Z
+- name: com.fasterxml.jackson.core:jackson-databind
+  description: 'General data-binding functionality for Jackson: works on core streaming
+    API'
+  version: 2.14.1
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/Spring_With_Maven/pom.xml
+  detection_source: SpringFramework/Spring_With_Maven/pom.xml
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-29 06:24:11.000000000 Z
+- name: com.fasterxml.jackson.datatype:jackson-datatype-jsr310
+  description: Add-on module to support JSR-310
+  version: 2.14.2
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/spring_data_jpa/pom.xml
+  detection_source: SpringFramework/spring_data_jpa/pom.xml
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-02-03 18:18:22.000000000 Z
+- name: javax.servlet:javax.servlet-api
+  description: Java.net - The Source for Java Technology Collaboration
+  version: 4.0.1
+  license: GPL-2.0-with-classpath-exception
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/Spring_With_Maven/pom.xml
+  detection_source: SpringFramework/Spring_With_Maven/pom.xml
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-29 04:46:21.000000000 Z
+- name: mysql:mysql-connector-java
+  description: MySQL JDBC Type 4 driver
+  version: 8.0.32
+  license: GPL-3.0-only
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/spring_data_jpa/pom.xml
+  detection_source: SpringFramework/spring_data_jpa/pom.xml
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-02-03 18:18:22.000000000 Z
+- name: org.hibernate:hibernate-core
+  description: Hibernate's core ORM functionality
+  license: LGPL-2.0-only,GPL-3.0-or-later
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/spring_data_jpa/pom.xml
+  detection_source: SpringFramework/spring_data_jpa/pom.xml
+  last_updated_by: mGunawardhana
+  last_updated_on: 2023-02-09 03:53:28.000000000 Z
+- name: org.junit.jupiter:junit-jupiter-api
+  description: Module "junit-jupiter-api" of JUnit 5
+  version: 5.9.2
+  license: EPL-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/spring_data_jpa/pom.xml
+  detection_source: SpringFramework/spring_data_jpa/pom.xml
+  last_updated_by: mGunawardhana
+  last_updated_on: 2023-02-09 03:53:28.000000000 Z
+- name: org.modelmapper:modelmapper
+  description: Simple, Intelligent, Object Mapping
+  version: 3.1.1
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/spring_data_jpa/pom.xml
+  detection_source: SpringFramework/spring_data_jpa/pom.xml
+  last_updated_by: mGunawardhana
+  last_updated_on: 2023-02-09 03:53:28.000000000 Z
+- name: org.projectlombok:lombok
+  description: 'Spice up your java: Automatic Resource Management'
+  version: 1.18.24
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/Spring_With_Maven/pom.xml
+  detection_source: SpringFramework/Spring_With_Maven/pom.xml
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-29 04:28:34.000000000 Z
+- name: org.springframework.data:spring-data-jpa
+  description: Spring Data module for JPA repositories
+  version: 2.7.7
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/spring_data_jpa/pom.xml
+  detection_source: SpringFramework/spring_data_jpa/pom.xml
+  last_updated_by: mGunawardhana
+  last_updated_on: 2023-02-09 03:53:28.000000000 Z
+- name: org.springframework:spring-test
+  description: Spring TestContext Framework
+  version: 5.3.25
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/spring_data_jpa/pom.xml
+  detection_source: SpringFramework/spring_data_jpa/pom.xml
+  last_updated_by: mGunawardhana
+  last_updated_on: 2023-02-09 03:53:28.000000000 Z
+- name: org.springframework:spring-webmvc
+  description: Spring Web MVC
+  version: 5.3.25
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/mGunawardhana/spring-framework-lifecycle-libs-others/blob/master/SpringFramework/Spring_With_Maven/pom.xml
+  detection_source: SpringFramework/Spring_With_Maven/pom.xml
+  last_updated_by: Maneesha Gunawardhana
+  last_updated_on: 2023-01-29 04:28:34.000000000 Z
